@@ -16,6 +16,19 @@ Java will be be used to introduce Object Oriented Programming, commencing at an 
 
 - To introduce graphics programming.
 
+## Programme details
+
+1. Java Syntax and Semantics, variables, the program development process
+2. Programming constructs, loops and conditionals
+3. Classes and objects in Java
+4. Extending classes with inheritance
+5. Abstract classes, more inheritance  and interfaces
+6. Exceptions
+7. Arrays including multi-dimensional arrays
+8. Object Oriented Software Development and file handling.
+9. Graphics programming
+10. Advanced graphics programming
+
 ## Learning outcomes
 
 By the end of the course students will be expected to:
@@ -29,7 +42,7 @@ By the end of the course students will be expected to:
 ---
 
 <span id="soft"></span>
-## Software toolkit
+## Development tools
 
 1. [Java SE Development Kit 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
