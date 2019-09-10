@@ -6,7 +6,7 @@ Java is an excellent language to introduce object-oriented programming. After co
 The course will also introduce elements of software engineering including the waterfall method. The course will also include a lecture on the use of data structures including, stacks, queues, hash tables and lists.
 
 ## Course aims
-Java will be be used to introduce Object Oriented Programming, commencing at an introductory level. The course will cover encapsulation, inheritance, polymorphism, software engineering, graphics programming and exception handling.
+Java will be used to introduce Object Oriented Programming, commencing at an introductory level. The course will cover encapsulation, inheritance, polymorphism, software engineering, graphics programming and exception handling.
 
 ## Course Objectives
 
