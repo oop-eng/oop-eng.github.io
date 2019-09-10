@@ -44,13 +44,12 @@ By the end of the course students will be expected to:
 <span id="soft"></span>
 ## Development tools
 
-1. [Java SE Development Kit 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+- [Oracle JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) or [OpenJDK 11](https://adoptopenjdk.net/?variant=openjdk11&jvmVariant=hotspot).
+- [Eclipse IDE for Java Developers](http://www.eclipse.org/downloads/eclipse-packages/):
+	- add-on: [ObjectAid Class Diagram](http://www.objectaid.com/class-diagram) ([update site URL](http://www.objectaid.com/update/current/));
+	- add-on: [Checkstyle](https://checkstyle.org/eclipse-cs/#!/) ([update site URL](http://eclipse-cs.sourceforge.net/update));
+	- add-on: [Regex Util](http://myregexp.com/eclipsePlugin.html) ([update site URL](http://regex-util.sourceforge.net/update/)). Open it in the Eclipse menu `Window / Show View / Other / Regex Util`.
 
-2. [Eclipse IDE for Java Developers](http://www.eclipse.org/downloads/eclipse-packages/):
-	- [ObjectAid UML Explorer update site URL](http://www.objectaid.com/update/current/). Install the [ObjectAid Class Diagram plug-in](http://www.objectaid.com/class-diagram);
-	- [Checkstyle update site URL](http://eclipse-cs.sourceforge.net/update). Use [Sun Checks Eclipse](http://www.vogella.com/tutorials/Checkstyle/article.html#installation) ([Install](http://eclipse-cs.sourceforge.net/#!/install), [setup](http://eclipse-cs.sourceforge.net/#!/project-setup), [tutorial](http://www.vogella.com/tutorials/Checkstyle/article.html));
-	- [Regex Util update site URL](http://regex-util.sourceforge.net/update/) ([Project home](http://myregexp.com/eclipsePlugin.html)). Open it in the Eclipse menu `Window / Show View / Other / Regex Util`.
-	
 ---
 
 <span id="references"></span>
@@ -69,7 +68,5 @@ By the end of the course students will be expected to:
 - [Java Platform Standard Edition 8 Documentation](http://docs.oracle.com/javase/8/docs/);
 - [Java Tutorials](http://docs.oracle.com/javase/tutorial/index.html);
 - [How to Write Doc Comments](http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html);
-- [Google Java Style](http://google-styleguide.googlecode.com/svn/trunk/javaguide.html);
-- [Навігація і редагування в Eclipse](http://habrahabr.ru/post/168223/);
-- [Словник термінів ООП](http://vmk.ugatu.ac.ru/book/buch/glossary.htm).
+- [Google Java Style](http://google-styleguide.googlecode.com/svn/trunk/javaguide.html).
 
