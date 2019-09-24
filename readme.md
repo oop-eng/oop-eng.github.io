@@ -74,9 +74,7 @@ By the end of the course students will be expected to:
 
 ## Practical tasks
 
-### Task #1
-
-Using the [Eclipse IDE](https://www.eclipse.org/ide/) for Java programming.
+### Task #1. Using the [Eclipse IDE](https://www.eclipse.org/ide/) for Java programming.
 
 - [Eclipse Documentation](http://help.eclipse.org/)
 - [Tutorial](https://www.tutorialspoint.com/eclipse)
