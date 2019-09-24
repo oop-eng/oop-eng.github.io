@@ -121,7 +121,6 @@ public class <your_class_name> {
 
 }
 ```
-
 7. Launch your application in Eclipse.
 
 	> *Help:* [Run your project in Eclipse](https://www.vogella.com/tutorials/Eclipse/article.html#run-your-project-in-eclipse)
@@ -171,10 +170,9 @@ public class Calculator {
 
 }
 ```
-
 10. Change your Main class based on the following listing, launch it and check output results.
 
-```Java
+```java
 package <your_package_name>;
 
 public class Main {
