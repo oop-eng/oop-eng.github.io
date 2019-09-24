@@ -72,7 +72,7 @@ By the end of the course students will be expected to:
 
 ---
 
-## Practical tasks
+## Practice tasks
 
 ### 1. Using the [Eclipse IDE](https://www.eclipse.org/ide/) for Java programming
 
