@@ -109,6 +109,7 @@ Using the [Eclipse IDE](https://www.eclipse.org/ide/) for Java programming.
 	> *Hint:* Use the following class name `Main`
 	
 6. Change the class based on the following listing.
+
 ```java
 package <your_package_name>;
 
@@ -129,10 +130,80 @@ public class <your_class_name> {
 
 	> *Help:* [Run Java program outside Eclipse](https://www.vogella.com/tutorials/Eclipse/article.html#run-java-program-outside-eclipse).
 
-9. Create new class named `Calculator` based on the following listing.
+9. Create new class named `Calculator` based on the following listing and solve all TODOs.
+
 ```java
-// Code
+package <your_package_name>;
+
+public class Calculator {
+
+	public int inc(int a) {
+		// TODO Add one to 'a'
+
+		// TODO return your calculated value
+		// instead of 0
+		return 0;
+	}
+
+	public int dec(int a) {
+		// TODO Subtract one from 'a'
+
+		// TODO return your calculated value
+		// instead of 0
+		return 0;
+	}
+
+	public int sum(int a, int b) {
+		// TODO Calculate the sum of 'a' and 'b'
+
+		// TODO return your calculated value
+		// instead of 0
+		return 0;
+	}
+
+	public String check(int a) {
+		// TODO Check that 'a' is positive or negative.
+		// If 'a' is positive return "positive".
+		// If 'a' is negative return "negative".
+		// If a is zero return "zero".
+		return "";
+	}
+
+}
 ```
 
-10. ...
-	
+10. Change your Main class based on the following listing, launch it and check output results.
+
+```Java
+package <your_package_name>;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Calculator calculator = new Calculator();
+		
+		int intResult;
+		intResult = calculator.inc(1);
+		System.out.println(intResult);
+		
+		intResult = calculator.dec(1);
+		System.out.println(intResult);
+		
+		intResult = calculator.sum(2, 3);
+		System.out.println(intResult);
+		
+		String strResult;
+		strResult = calculator.check(1);
+		System.out.println(strResult);
+
+		strResult = calculator.check(-1);
+		System.out.println(strResult);
+
+		strResult = calculator.check(0);
+		System.out.println(strResult);
+
+	}
+
+```
+
