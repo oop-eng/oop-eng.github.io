@@ -109,8 +109,7 @@ Using the [Eclipse IDE](https://www.eclipse.org/ide/) for Java programming.
 	> *Hint:* Use the following class name `Main`
 	
 6. Change the class based on the following listing.
-	
-	```java
+```java
 package <your_package_name>;
 
 public class <your_class_name> {
@@ -120,7 +119,8 @@ public class <your_class_name> {
 	}
 
 }
-	```
+```
+
 7. Launch your application in Eclipse.
 
 	> *Help:* [Run your project in Eclipse](https://www.vogella.com/tutorials/Eclipse/article.html#run-your-project-in-eclipse)
@@ -130,4 +130,9 @@ public class <your_class_name> {
 	> *Help:* [Run Java program outside Eclipse](https://www.vogella.com/tutorials/Eclipse/article.html#run-java-program-outside-eclipse).
 
 9. Create new class named `Calculator` based on the following listing.
+```java
+// Code
+```
+
+10. ...
 	
