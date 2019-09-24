@@ -86,13 +86,13 @@ By the end of the course students will be expected to:
 	
 2) Download and install the [Eclipse IDE for Java Developers](https://eclipse.org/downloads/eclipse-packages/).
 
-> Help: [Download and installation of the Eclipse IDE for Java Developers](https://www.vogella.com/tutorials/Eclipse/article.html#download-and-installation-of-the-eclipse-ide-for-java-developers)
+> Help: [Download and installation of the Eclipse IDE for Java Developers](https://www.vogella.com/tutorials/Eclipse/article.html#download-and-installation-of-the-eclipse-ide-for-java-developers).
 
 3) Start the Eclipse IDE and verify JDK installation.
 
-> Help: [Starting the Eclipse IDE](https://www.vogella.com/tutorials/Eclipse/article.html#starting-the-eclipse-ide)
+> Help: [Starting the Eclipse IDE](https://www.vogella.com/tutorials/Eclipse/article.html#starting-the-eclipse-ide).
 >
-> Help: [Preparing the workbench](https://help.eclipse.org/2019-09/topic/org.eclipse.jdt.doc.user/gettingStarted/qs-2.htm)
+> Help: [Preparing the workbench](https://help.eclipse.org/2019-09/topic/org.eclipse.jdt.doc.user/gettingStarted/qs-2.htm).
 	
 4) Create a new Java project named `task01`.
 
@@ -102,9 +102,9 @@ By the end of the course students will be expected to:
 	
 > Help: [Create package](https://www.vogella.com/tutorials/Eclipse/article.html#create-package)
 >
-> Hint: Use the following package name `ua.khpi.oop.your_first_name.task01`
+> Hint: Use the following package name: `ua.khpi.oop.your_first_name.task01`.
 >
-> Hint: Use the following class name `Main`
+> Hint: Use the following class name: `Main`.
 	
 6) Change the class based on the following listing.
 
@@ -122,7 +122,7 @@ public class your_class_name {
 
 7) Launch your application in Eclipse.
 
-> Help: [Run your project in Eclipse](https://www.vogella.com/tutorials/Eclipse/article.html#run-your-project-in-eclipse)
+> Help: [Run your project in Eclipse](https://www.vogella.com/tutorials/Eclipse/article.html#run-your-project-in-eclipse).
 
 8) Create JAR file and launch your application outside Eclipse.
 
