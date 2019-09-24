@@ -76,9 +76,9 @@ By the end of the course students will be expected to:
 
 ### 1. Using the [Eclipse IDE](https://www.eclipse.org/ide/) for Java programming
 
-- [Eclipse Documentation](http://help.eclipse.org/)
-- [Tutorial](https://www.tutorialspoint.com/eclipse)
-- [Tutorial](https://www.vogella.com/tutorials/Eclipse/article.html)
+- [Eclipse Documentation](http://help.eclipse.org/).
+- [Tutorial](https://www.tutorialspoint.com/eclipse).
+- [Tutorial](https://www.vogella.com/tutorials/Eclipse/article.html).
 
 1) Install the [Java Development Kit (JDK)](https://adoptopenjdk.net/?variant=openjdk11&jvmVariant=hotspot) and check its version.
 
@@ -96,11 +96,11 @@ By the end of the course students will be expected to:
 	
 4) Create a new Java project named `task01`.
 
-> Help: [Create your first Java program](https://www.vogella.com/tutorials/Eclipse/article.html#create-your-first-java-program)
+> Help: [Create your first Java program](https://www.vogella.com/tutorials/Eclipse/article.html#create-your-first-java-program).
 
 5) Create a package and Java class.
 	
-> Help: [Create package](https://www.vogella.com/tutorials/Eclipse/article.html#create-package)
+> Help: [Create package](https://www.vogella.com/tutorials/Eclipse/article.html#create-package).
 >
 > Hint: Use the following package name: `ua.khpi.oop.your_first_name.task01`.
 >
