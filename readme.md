@@ -207,3 +207,18 @@ public class Main {
 
 ```
 
+### Homework
+
+Explain the result of the following expressions:
+
+```java
+int a = 5;
+int b = 10;
+
+System.out.println((a > 5) && ((b = 99) == 10));
+System.out.println(b);
+		
+System.out.println(((b = 99) == 10) && (a > 5));
+System.out.println(b);
+```
+
