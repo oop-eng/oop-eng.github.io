@@ -209,7 +209,7 @@ public class Main {
 
 ### Homework
 
-Explain the result of the following expressions:
+Explain the result of the following program fragment:
 
 ```java
 int a = 5;
