@@ -430,6 +430,6 @@ class Main {
 > **NOTE:** There are two kinds of types in the Java programming language: *primitive* types (`byte`, `short`, `int`, `long`, `char`, `float`, `double`, `boolean`) and *reference* types (`class`, `interface`, `array`). There are, correspondingly, two kinds of data values that can be stored in variables, passed as arguments, returned by methods, and operated on: *primitive* values and *reference* values.
 >
 > An object is a dynamically created instance of a class type or a dynamically created array. The values of a reference type are references to objects.
-
+>
 > Primitive values do not share state with other primitive values.
 
