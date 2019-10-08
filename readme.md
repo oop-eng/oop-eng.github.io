@@ -222,3 +222,214 @@ System.out.println(((b = 99) == 10) && (a > 5));
 System.out.println(b);
 ```
 
+---
+
+### 2. Loops and Conditionals in Java
+
+- [Loop Control](https://www.tutorialspoint.com/java/java_loop_control.htm).
+- [Decision Making](https://www.tutorialspoint.com/java/java_decision_making.htm).
+
+Start by making a new Eclipse project named `task02`. Give it a package named `ua.khpi.oop.your_first_name.task02`.
+
+1) Add a class called `LoopEx` to your package. Give it a method named `printNums1` that will take a number and print out the numbers from `0` up to and including that number. For example, if you pass in `3`, it should print `0`, `1`, `2`, and `3`. Your overall code will look roughly like this:
+
+```java
+package your_package_name;
+
+public class LoopEx {
+	public static void main(String[] args) {
+		printNums1(3);
+	}
+	public static void printNums1(int upperLimit) {
+		// TODO: Print out the numbers from 0 up to and including upperLimit.
+	}
+}
+```
+
+2) Add a second method named `printNums2` to your class. This one should print every other number: i.e., `0`, `2`, `4`, etc., up to the last value that is less than or equal to the argument to the method. For example, if your main method calls `printNums2(7)`, it should print `0`, `2`, `4`, and `6`. Remember that `i++` in a loop is the same as if you had written `i = i + 1`.
+
+3) Add a third method named `printNums3` to your class. This one should be similar to your first method, but should print in reverse order. For example, if your main method calls `printNums3(5)`, it should print `5`, `4`, `3`, `2`, and `1`.
+
+4) Copy the `ArrayEx` class into your project.
+
+```java
+public class ArrayEx {
+	public static void main(String[] args) {
+		double[] numbers = { 1.1, 2.2, 3.3 };
+		System.out.println("Sum of {1.1,2.2,3.3} = " + calcSum1(numbers));
+		System.out.println("Average of {1.1,2.2,3.3} = " + arrayAverage(numbers));
+		double[] moreNumbers = { 1.1, 2.2, 3.3, -1, -2, 4 };
+		System.out.println("Number positive = " + numPositive(moreNumbers));
+		System.out.println("Number from 1.1 to 3.2 = " + numInRange(moreNumbers, 1.0, 3.2));
+	}
+
+	public static double calcSum1(double[] numbers) {
+		double sum = 0;
+		for (double num : numbers) {
+			sum = sum + num; // Or sum += num
+		}
+		return sum;
+	}
+
+	public static double calcSum2(double[] numbers) {
+		double sum = 0;
+		for (int i = 0; i < numbers.length; i++) {
+			sum = sum + numbers[i];
+		}
+		return sum;
+	}
+
+	public static double calcSum3(double[] numbers) {
+		double sum = 0;
+		int i = 0;
+		while (i < numbers.length) {
+			sum = sum + numbers[i];
+			i++; // Or i = i + 1, or i += 1
+		}
+		return sum;
+	}
+
+	// Unlike the other three versions, this one fails for a 0-length array.
+	public static double calcSum4(double[] numbers) {
+		double sum = 0;
+		int i = 0;
+		do {
+			sum = sum + numbers[i];
+			i++;
+		} while (i < numbers.length);
+		return sum;
+	}
+
+	public static double calcAverage(double[] numbers) {
+		// TODO: Return the average value of 'numbers'.
+		return 0.0;
+	}
+
+	public static int numPositive(double[] numbers) {
+		// TODO: Return the count of how many of the array entries are greater than or
+		// equal to zero.
+		return 0;
+	}
+
+	public static int numInRange(double[] nums, double lowerBound, double upperBound) {
+		// TODO: Return the count of how many of the array entries are between the two
+		// bounds, inclusive.
+		return 0;
+	}
+
+}
+
+```
+
+Add a method named `calcAverage` that, given an array of doubles, will return the average value.
+
+> **Hint:** have your new method make use of the existing `calcSum1` method, and then use the length property of arrays.
+>
+> For example, given the array already made inside `main` (containing `1.1`, `2.2`, and `3.3`), calling `calcAverage(numbers)` will output `2.1999...` (almost `2.2`, but not exactly, due to roundoff error).
+
+5) Add a method named `numPositive` that, given an array of doubles, will return the count (int) of how many of them are
+greater than or equal to zero.
+
+> For example, given the array already made inside main, calling `numPositive(numbers)` will output `3`. Add a few negative numbers to the array and verify that you still get `3`. Add a new positive number and verify that you now get `4`.
+
+6) Add a method named `numInRange` that, given an array of numbers, a lower bound, and an upper bound, will return the count of how many of the array entries are between the two bounds, inclusive.
+
+> For example, given the array already made inside main (containing `1.1`, `2.2`, and `3.3`), calling `numInRange(numbers, 1.1, 3.2)` should return `2`.
+
+---
+
+### 3. Methods and Method Overloading in Java
+
+- [Java Methods](https://www.tutorialspoint.com/java/java_methods.htm).
+- [Java Methods](https://www.w3schools.com/java/java_methods.asp).
+
+Create a new Eclipse project named `task03`. Use a package named `ua.khpi.oop.your_first_name.task03` for all created classes.
+
+1) Add a class called `One` to your package. Give it a method named `square` that will take an integer and return the square of the integer. For example, if you pass in `3`, it should return `9`. Your overall code will look roughly like this:
+
+```java
+class One {
+	public static int square(int x) {
+		// Calculate and return the square of 'x'.
+		return 0;
+	}
+}
+```
+
+2) Add a second method named `power` to your class. Return the result of `x` raised to `y`th power. For example, if your main method calls `power(2, 3)`, it should return `8`.
+
+```java
+public static int power(int x, int y) {
+	// Return the result of 'x' raised to 'y'th power.
+	return 0;
+}
+```
+
+3) Add a third method named `power` to your class. This one should be similar to your second method, but shouldn't return any value. Pass an object of class `A` to this method. Modify the object to save the result.
+
+```java
+public static void power(A a, int y) {
+	// Raise 'a.x' to the 'y'th power.
+}
+```
+
+Pre-create a simple class `A`:
+
+```java
+class A {
+	int x;
+}
+```
+
+4) Add a fourth method named `power` to your class. Pass an array to this method. Raise each element of an array to the `y`th power.
+
+```java
+public static void power(int[] array, int y) {
+	// Raise each element of an array to the 'y'th power.
+}
+```
+
+5) Use the following class `Main` to test the implemented methods of class `One`.
+
+```java
+class Main {
+	public static void main(String[] args) {
+		System.out.println("Begin...");
+		// Use the following VM arguments: -enableassertions
+		{
+			int x = 3;
+			int y = 2;
+			int expected = 9;
+			int actual = One.power(x, y);
+			// Is the 'expected' equal to the 'actual'?
+			assert expected == actual : "expected = " + expected + " but actual = " + actual;
+		}
+		{
+			A actual = new A();
+			actual.x = 3;
+			int y = 2;
+			int expected = 9;
+			One.power(actual, y);
+			// Is the 'expected' equal to the 'actual.x'?
+			assert expected == actual.x : "expected = " + expected + " but actual = " + actual.x;
+		}
+		{
+			int[] actual = { 1, 2, 3, 4, 5 };
+			int y = 2;
+			int[] expected = { 1, 4, 9, 16, 25 };
+			One.power(actual, y);
+			// Is the 'expected' equal to the 'actual'?
+			assert Arrays.compare(expected, actual) == 0 : "expected = " + Arrays.toString(expected) + " but actual = "
+					+ Arrays.toString(actual);
+		}
+		System.out.println("Done.");
+	}
+}
+```
+
+> *NOTE:* There are two kinds of types in the Java programming language: *primitive* types (`byte`, `short`, `int`, `long`, `char`, `float`, `double`, `boolean`) and *reference* types (`class`, `interface`, `array`). There are, correspondingly, two kinds of data values that can be stored in variables, passed as arguments, returned by methods, and operated on: *primitive* values and *reference* values.
+>
+> An object is a dynamically created instance of a class type or a dynamically created array. The values of a reference type are references to objects.
+
+> Primitive values do not share state with other primitive values.
+
