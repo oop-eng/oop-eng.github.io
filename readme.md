@@ -257,7 +257,7 @@ public class ArrayEx {
 	public static void main(String[] args) {
 		double[] numbers = { 1.1, 2.2, 3.3 };
 		System.out.println("Sum of {1.1,2.2,3.3} = " + calcSum1(numbers));
-		System.out.println("Average of {1.1,2.2,3.3} = " + arrayAverage(numbers));
+		System.out.println("Average of {1.1,2.2,3.3} = " + calcAverage(numbers));
 		double[] moreNumbers = { 1.1, 2.2, 3.3, -1, -2, 4 };
 		System.out.println("Number positive = " + numPositive(moreNumbers));
 		System.out.println("Number from 1.1 to 3.2 = " + numInRange(moreNumbers, 1.0, 3.2));
