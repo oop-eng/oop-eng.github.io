@@ -82,29 +82,29 @@ By the end of the course students will be expected to:
 
 1) Install the [Java Development Kit (JDK)](https://adoptopenjdk.net/?variant=openjdk11&jvmVariant=hotspot) and check its version.
 
-> **Help:** [Installation of Java](https://www.vogella.com/tutorials/JavaIntroduction/article.html#installation-of-java).
+> **HELP:** [Installation of Java](https://www.vogella.com/tutorials/JavaIntroduction/article.html#installation-of-java).
 	
 2) Download and install the [Eclipse IDE for Java Developers](https://eclipse.org/downloads/eclipse-packages/).
 
-> Help: [Download and installation of the Eclipse IDE for Java Developers](https://www.vogella.com/tutorials/Eclipse/article.html#download-and-installation-of-the-eclipse-ide-for-java-developers).
+> HELP: [Download and installation of the Eclipse IDE for Java Developers](https://www.vogella.com/tutorials/Eclipse/article.html#download-and-installation-of-the-eclipse-ide-for-java-developers).
 
 3) Start the Eclipse IDE and verify JDK installation.
 
-> **Help:** [Starting the Eclipse IDE](https://www.vogella.com/tutorials/Eclipse/article.html#starting-the-eclipse-ide).
+> **HELP:** [Starting the Eclipse IDE](https://www.vogella.com/tutorials/Eclipse/article.html#starting-the-eclipse-ide).
 >
-> **Help:** [Preparing the workbench](https://help.eclipse.org/2019-09/topic/org.eclipse.jdt.doc.user/gettingStarted/qs-2.htm).
+> **HELP:** [Preparing the workbench](https://help.eclipse.org/2019-09/topic/org.eclipse.jdt.doc.user/gettingStarted/qs-2.htm).
 	
 4) Create a new Java project named `task01`.
 
-> **Help:** [Create your first Java program](https://www.vogella.com/tutorials/Eclipse/article.html#create-your-first-java-program).
+> **HELP:** [Create your first Java program](https://www.vogella.com/tutorials/Eclipse/article.html#create-your-first-java-program).
 
 5) Create a package and Java class.
 	
-> **Help:** [Create package](https://www.vogella.com/tutorials/Eclipse/article.html#create-package).
+> **HELP:** [Create package](https://www.vogella.com/tutorials/Eclipse/article.html#create-package).
 >
-> **Hint:** Use the following package name: `ua.khpi.oop.your_first_name.task01`.
+> **HINT:** Use the following package name: `ua.khpi.oop.your_first_name.task01`.
 >
-> **Hint:** Use the following class name: `Main`.
+> **HINT:** Use the following class name: `Main`.
 	
 6) Change the class based on the following listing.
 
@@ -122,11 +122,11 @@ public class your_class_name {
 
 7) Launch your application in Eclipse.
 
-> **Help:** [Run your project in Eclipse](https://www.vogella.com/tutorials/Eclipse/article.html#run-your-project-in-eclipse).
+> **HELP:** [Run your project in Eclipse](https://www.vogella.com/tutorials/Eclipse/article.html#run-your-project-in-eclipse).
 
 8) Create JAR file and launch your application outside Eclipse.
 
-> **Help:** [Run Java program outside Eclipse](https://www.vogella.com/tutorials/Eclipse/article.html#run-java-program-outside-eclipse).
+> **HELP:** [Run Java program outside Eclipse](https://www.vogella.com/tutorials/Eclipse/article.html#run-java-program-outside-eclipse).
 
 9) Create new class named `Calculator` based on the following listing and solve all TODOs.
 
@@ -323,7 +323,7 @@ public class ArrayEx {
 
 Add a method named `calcAverage` that, given an array of doubles, will return the average value.
 
-> **Hint:** have your new method make use of the existing `calcSum1` method, and then use the length property of arrays.
+> **HINT:** have your new method make use of the existing `calcSum1` method, and then use the length property of arrays.
 >
 > For example, given the array already made inside `main` (containing `1.1`, `2.2`, and `3.3`), calling `calcAverage(numbers)` will output `2.1999...` (almost `2.2`, but not exactly, due to roundoff error).
 
@@ -432,4 +432,110 @@ class Main {
 > An object is a dynamically created instance of a class type or a dynamically created array. The values of a reference type are references to objects.
 >
 > Primitive values do not share state with other primitive values.
+
+### Homework
+
+Create a Java program to demonstrate method overloading:
+- by changing data type of arguments;
+- by changing arguments number.
+
+> **HELP:** [The Java Tutorials - Defining Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html).
+
+---
+
+### 4. Constructors in Java
+
+- [The Java Tutorials - Providing Constructors for Your Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html).
+- [Java Constructors](https://www.tutorialspoint.com/java/java_constructors.htm).
+- [Constructors in Java](https://www.javatpoint.com/java-constructor).
+
+Create a new Eclipse project named `task04`. Use a package named `ua.khpi.oop.your_first_name.task04` for all created classes.
+
+1) Add a class called `ConstructorEx` to your package. Give it a field named `array`:
+
+```java
+class ConstructorEx {
+	int[] array;
+}
+```
+2) Add three constructors to your class:
+
+```java
+ConstructorEx(int length) {
+	// TODO: Initialize the field "array" by creating a new array using the
+	//       specified "length".
+}
+
+ConstructorEx(int[] srcArray) {
+	// TODO: Initialize the "array" field with the reference
+	//       to the specified "srcArray".
+}
+
+ConstructorEx(int[] srcArray, boolean copyArray) {
+	// TODO: Initialize the "array" field by reference to the specified "srcArray"
+	//       or by copying the contents of the "srcArray" depending on the "copyArray" flag.
+}
+```
+
+3) Use the following class `Main` to test the implemented constructors of class `ConstructorEx`.
+
+```java
+public class Main {
+
+	public static void main(String[] args) {
+		System.out.println("Begin...");
+
+		ConstructorEx a = new ConstructorEx(3);
+		System.out.println(Arrays.toString(a.array));
+		System.out.println("---");
+
+		int[] array = new int[5];
+
+		ConstructorEx b = new ConstructorEx(array);
+		Arrays.fill(array, 1);
+		System.out.println(Arrays.toString(array));
+		System.out.println(Arrays.toString(b.array));
+		System.out.println("---");
+
+		Arrays.fill(array, 2);
+		System.out.println(Arrays.toString(array));
+		System.out.println(Arrays.toString(b.array));
+		System.out.println("---");
+
+		ConstructorEx c = new ConstructorEx(array, true);
+		Arrays.fill(array, 3);
+		System.out.println(Arrays.toString(array));
+		System.out.println(Arrays.toString(c.array));
+		System.out.println("---");
+
+		ConstructorEx d = new ConstructorEx(array, false);
+		Arrays.fill(array, 4);
+		System.out.println(Arrays.toString(array));
+		System.out.println(Arrays.toString(d.array));
+
+		System.out.println("Done.");
+	}
+
+}
+```
+
+YYou should obtain the following result:
+
+```
+Begin...
+[0, 0, 0]
+---
+[1, 1, 1, 1, 1]
+[1, 1, 1, 1, 1]
+---
+[2, 2, 2, 2, 2]
+[2, 2, 2, 2, 2]
+---
+[3, 3, 3, 3, 3]
+[2, 2, 2, 2, 2]
+---
+[4, 4, 4, 4, 4]
+[4, 4, 4, 4, 4]
+Done.
+```
 
