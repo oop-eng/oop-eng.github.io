@@ -519,7 +519,7 @@ public class Main {
 }
 ```
 
-YYou should obtain the following result:
+You should obtain the following result:
 
 ```
 Begin...
