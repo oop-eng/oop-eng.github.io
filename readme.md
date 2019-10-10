@@ -72,8 +72,10 @@ By the end of the course students will be expected to:
 
 ---
 
+<span id="practice"></span>
 ## Practice tasks
 
+<span id="task_01"></span>
 ### 1. Using the [Eclipse IDE](https://www.eclipse.org/ide/) for Java programming
 
 - [Eclipse Documentation](http://help.eclipse.org/).
@@ -207,6 +209,7 @@ public class Main {
 
 ```
 
+<span id="task_01_homework"></span>
 ### Homework
 
 Explain the result of the following program fragment:
@@ -224,6 +227,7 @@ System.out.println(b);
 
 ---
 
+<span id="task_02"></span>
 ### 2. Loops and Conditionals in Java
 
 - [Loop Control](https://www.tutorialspoint.com/java/java_loop_control.htm).
@@ -338,6 +342,7 @@ greater than or equal to zero.
 
 ---
 
+<span id="task_03"></span>
 ### 3. Methods and Method Overloading in Java
 
 - [Java Methods](https://www.tutorialspoint.com/java/java_methods.htm).
@@ -433,6 +438,7 @@ class Main {
 >
 > Primitive values do not share state with other primitive values.
 
+<span id="task_03_homework"></span>
 ### Homework
 
 Create a Java program to demonstrate method overloading:
@@ -443,6 +449,7 @@ Create a Java program to demonstrate method overloading:
 
 ---
 
+<span id="task_04"></span>
 ### 4. Constructors in Java
 
 - [The Java Tutorials - Providing Constructors for Your Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html).
