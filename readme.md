@@ -84,7 +84,7 @@ By the end of the course students will be expected to:
 
 1) Install the [Java Development Kit (JDK)](https://adoptopenjdk.net/?variant=openjdk11&jvmVariant=hotspot) and check its version.
 
-> **HELP:** [Installation of Java](https://www.vogella.com/tutorials/JavaIntroduction/article.html#installation-of-java).
+> **Help:** [Installation of Java](https://www.vogella.com/tutorials/JavaIntroduction/article.html#installation-of-java).
 	
 2) Download and install the [Eclipse IDE for Java Developers](https://eclipse.org/downloads/eclipse-packages/).
 
@@ -92,21 +92,21 @@ By the end of the course students will be expected to:
 
 3) Start the Eclipse IDE and verify JDK installation.
 
-> **HELP:** [Starting the Eclipse IDE](https://www.vogella.com/tutorials/Eclipse/article.html#starting-the-eclipse-ide).
+> **Help:** [Starting the Eclipse IDE](https://www.vogella.com/tutorials/Eclipse/article.html#starting-the-eclipse-ide).
 >
-> **HELP:** [Preparing the workbench](https://help.eclipse.org/2019-09/topic/org.eclipse.jdt.doc.user/gettingStarted/qs-2.htm).
+> **Help:** [Preparing the workbench](https://help.eclipse.org/2019-09/topic/org.eclipse.jdt.doc.user/gettingStarted/qs-2.htm).
 	
 4) Create a new Java project named `task01`.
 
-> **HELP:** [Create your first Java program](https://www.vogella.com/tutorials/Eclipse/article.html#create-your-first-java-program).
+> **Help:** [Create your first Java program](https://www.vogella.com/tutorials/Eclipse/article.html#create-your-first-java-program).
 
 5) Create a package and Java class.
 	
-> **HELP:** [Create package](https://www.vogella.com/tutorials/Eclipse/article.html#create-package).
+> **Help:** [Create package](https://www.vogella.com/tutorials/Eclipse/article.html#create-package).
 >
-> **HINT:** Use the following package name: `ua.khpi.oop.your_first_name.task01`.
+> **Hint:** Use the following package name: `ua.khpi.oop.your_first_name.task01`.
 >
-> **HINT:** Use the following class name: `Main`.
+> **Hint:** Use the following class name: `Main`.
 	
 6) Change the class based on the following listing.
 
@@ -124,11 +124,11 @@ public class your_class_name {
 
 7) Launch your application in Eclipse.
 
-> **HELP:** [Run your project in Eclipse](https://www.vogella.com/tutorials/Eclipse/article.html#run-your-project-in-eclipse).
+> **Help:** [Run your project in Eclipse](https://www.vogella.com/tutorials/Eclipse/article.html#run-your-project-in-eclipse).
 
 8) Create JAR file and launch your application outside Eclipse.
 
-> **HELP:** [Run Java program outside Eclipse](https://www.vogella.com/tutorials/Eclipse/article.html#run-java-program-outside-eclipse).
+> **Help:** [Run Java program outside Eclipse](https://www.vogella.com/tutorials/Eclipse/article.html#run-java-program-outside-eclipse).
 
 9) Create new class named `Calculator` based on the following listing and solve all TODOs.
 
@@ -327,7 +327,7 @@ public class ArrayEx {
 
 Add a method named `calcAverage` that, given an array of doubles, will return the average value.
 
-> **HINT:** have your new method make use of the existing `calcSum1` method, and then use the length property of arrays.
+> **Hint:** Have your new method make use of the existing `calcSum1` method, and then use the length property of arrays.
 >
 > For example, given the array already made inside `main` (containing `1.1`, `2.2`, and `3.3`), calling `calcAverage(numbers)` will output `2.1999...` (almost `2.2`, but not exactly, due to roundoff error).
 
@@ -432,7 +432,7 @@ class Main {
 }
 ```
 
-> **NOTE:** There are two kinds of types in the Java programming language: *primitive* types (`byte`, `short`, `int`, `long`, `char`, `float`, `double`, `boolean`) and *reference* types (`class`, `interface`, `array`). There are, correspondingly, two kinds of data values that can be stored in variables, passed as arguments, returned by methods, and operated on: *primitive* values and *reference* values.
+> **Note:** There are two kinds of types in the Java programming language: *primitive* types (`byte`, `short`, `int`, `long`, `char`, `float`, `double`, `boolean`) and *reference* types (`class`, `interface`, `array`). There are, correspondingly, two kinds of data values that can be stored in variables, passed as arguments, returned by methods, and operated on: *primitive* values and *reference* values.
 >
 > An object is a dynamically created instance of a class type or a dynamically created array. The values of a reference type are references to objects.
 >
@@ -445,7 +445,7 @@ Create a Java program to demonstrate method overloading:
 - by changing data type of arguments;
 - by changing arguments number.
 
-> **HELP:** [The Java Tutorials - Defining Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html).
+> **Help:** [The Java Tutorials - Defining Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html).
 
 ---
 
