@@ -1,9 +1,8 @@
 [<< Practice tasks](readme.md#practice) | [Next task >>](task02.md)
 
----
 
 <span id="task_01"></span>
-### 1. Using the [Eclipse IDE](https://www.eclipse.org/ide/) for Java programming
+## 1. Using the [Eclipse IDE](https://www.eclipse.org/ide/) for Java programming
 
 - [Eclipse Documentation](http://help.eclipse.org/).
 - [Tutorial](https://www.tutorialspoint.com/eclipse).
@@ -137,7 +136,7 @@ public class Main {
 ```
 
 <span id="task_01_homework"></span>
-### Homework
+## Homework
 
 Explain the result of the following program fragment:
 
@@ -152,7 +151,6 @@ System.out.println(((b = 99) == 10) && (a > 5));
 System.out.println(b);
 ```
 
----
 
 [<< Practice tasks](readme.md#practice) | [Next task >>](task02.md)
 

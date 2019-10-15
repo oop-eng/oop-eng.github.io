@@ -1,9 +1,8 @@
 [<< Previous task](task03.md) | [Practice tasks](readme.md#practice) | [Next task >>](task05.md)
 
----
 
 <span id="task_04"></span>
-### 4. Constructors in Java
+## 4. Constructors in Java
 
 - [The Java Tutorials - Providing Constructors for Your Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html).
 - [Java Constructors](https://www.tutorialspoint.com/java/java_constructors.htm).
@@ -99,7 +98,6 @@ Begin...
 Done.
 ```
 
----
 
 [<< Previous task](task03.md) | [Practice tasks](readme.md#practice) | [Next task >>](task05.md)
 

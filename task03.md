@@ -1,9 +1,8 @@
 [<< Previous task](task02.md) | [Practice tasks](readme.md#practice) | [Next task >>](task04.md)
 
----
 
 <span id="task_03"></span>
-### 3. Methods and Method Overloading in Java
+## 3. Methods and Method Overloading in Java
 
 - [Java Methods](https://www.tutorialspoint.com/java/java_methods.htm).
 - [Java Methods](https://www.w3schools.com/java/java_methods.asp).
@@ -99,7 +98,7 @@ class Main {
 > Primitive values do not share state with other primitive values.
 
 <span id="task_03_homework"></span>
-### Homework
+## Homework
 
 Create a Java program to demonstrate method overloading:
 - by changing data type of arguments;
@@ -107,7 +106,6 @@ Create a Java program to demonstrate method overloading:
 
 > **Help:** [The Java Tutorials - Defining Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html).
 
----
 
 [<< Previous task](task02.md) | [Practice tasks](readme.md#practice) | [Next task >>](task04.md)
 
