@@ -1,6 +1,5 @@
 [<< Practice tasks](readme.md#practice) | [Next task >>](task02.md)
 
-
 <span id="task_01"></span>
 ## 1. Using the [Eclipse IDE](https://www.eclipse.org/ide/) for Java programming
 
@@ -151,6 +150,6 @@ System.out.println(((b = 99) == 10) && (a > 5));
 System.out.println(b);
 ```
 
-
+<br><br><br>
 [<< Practice tasks](readme.md#practice) | [Next task >>](task02.md)
 
