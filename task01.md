@@ -150,6 +150,7 @@ System.out.println(((b = 99) == 10) && (a > 5));
 System.out.println(b);
 ```
 
-<br><br><br>
+<br><br>
+
 [<< Practice tasks](readme.md#practice) | [Next task >>](task02.md)
 
