@@ -1,6 +1,5 @@
 [<< Previous task](task02.md) | [Practice tasks](readme.md#practice) | [Next task >>](task04.md)
 
-
 <span id="task_03"></span>
 ## 3. Methods and Method Overloading in Java
 
@@ -106,6 +105,7 @@ Create a Java program to demonstrate method overloading:
 
 > **Help:** [The Java Tutorials - Defining Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html).
 
+<br>
 
 [<< Previous task](task02.md) | [Practice tasks](readme.md#practice) | [Next task >>](task04.md)
 

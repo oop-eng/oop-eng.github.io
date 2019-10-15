@@ -1,6 +1,5 @@
 [<< Previous task](task03.md) | [Practice tasks](readme.md#practice) | [Next task >>](task05.md)
 
-
 <span id="task_04"></span>
 ## 4. Constructors in Java
 
@@ -98,6 +97,7 @@ Begin...
 Done.
 ```
 
+<br>
 
 [<< Previous task](task03.md) | [Practice tasks](readme.md#practice) | [Next task >>](task05.md)
 

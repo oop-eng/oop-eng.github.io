@@ -1,6 +1,5 @@
 [<< Previous task](task01.md) | [Practice tasks](readme.md#practice) | [Next task >>](task03.md)
 
-
 <span id="task_02"></span>
 ## 2. Loops and Conditionals in Java
 
@@ -114,6 +113,7 @@ greater than or equal to zero.
 
 > For example, given the array already made inside main (containing `1.1`, `2.2`, and `3.3`), calling `numInRange(numbers, 1.1, 3.2)` should return `2`.
 
+<br>
 
 [<< Previous task](task01.md) | [Practice tasks](readme.md#practice) | [Next task >>](task03.md)
 
