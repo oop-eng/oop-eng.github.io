@@ -97,6 +97,66 @@ Begin...
 Done.
 ```
 
+<span id="task_04_homework"></span>
+## Homework
+
+- [The Java Tutorials - Providing Constructors for Your Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html).
+- [The Java Tutorials - Using the this Keyword](https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html).
+- [The Java Tutorials - Controlling Access to Members of a Class](https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html).
+
+
+1) Fix the compilation errors of the following program.
+
+```java
+class One {
+	private int x;
+
+	void One() {
+		System.out.println("One::One()");
+		this(999);
+	}
+
+	One(int x) {
+		System.out.println("One::One(int)");
+		x = this.x;
+	}
+
+	private One getInstance() {
+		return null;
+	}
+}
+```
+
+2) Use the following `Main` class to test the implementation of the `One` class.
+
+```java
+public class Main {
+
+	public static void main(String[] args) {
+		One a = new One();
+		System.out.println(a.x);
+		One b = a.getInstance();
+		System.out.println(a == b);
+	}
+
+}
+```
+
+3) If necessary, сhange the implementation of the `One` class to obtain the following results.
+
+```
+One::One(int)
+One::One()
+999
+true
+```
+
+> **Hint:** Do not specify return type in constructor declaration.
+>
+> **Hint:** If present, the invocation of another constructor must be the first line in the constructor.
+>
+> **Hint:** Do not use private members to access them outside their class.
+
 <br>
 
 [<< Previous task](task03.md) | [Practice tasks](readme.md#practice) | [Next task >>](task05.md)
