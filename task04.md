@@ -157,50 +157,6 @@ true
 >
 > **Hint:** Do not use private members to access them outside their class.
 
-4) Make a new Eclipse project called "shapes" or something similar. Your eventual goal will be to make a Circle class with various capabilities (see below), and a test routine that makes some circles and tests them out. Put your Circle class and your test routine in two separate classes, like this:
-
-```java
-public class Circle {
-	public double radius;
-	...
-}
-```
-
-```java
-public class CircleTest {
-	public static void main(String[] args) {
-		Circle c = new Circle(...);
-		...
-	}
-}
-```
-
-Capabilities:
-
-- Give the Circle class a radius field of type double.
-- Give Circle a method that computes the area (Pi * r * r).
-- Give Circle a constructor to which you can pass the radius.
-- Have the constructor use the "this" keyword.
-
-> **Hint:** Unless you have previous Java experience, I strongly recommend you build up to the solution in a piecemeal fashion. For example, first make a Circle class with a radius field only, and test it out from the main in CircleTest. Then add the getArea method, and test it. Then add in a constructor. Then test it out again. Then change the constructor to use the "this" keyword, and test yet again.
->
-> **Hint:** The Circle class does not have a main, so you cannot execute it directly. You only directly run the CircleTest class, similar to the following.
-
-```java
-public class CircleTest {
-	public static void main(String[] args) {
-		for (int i = 0; i < 10; i++) {
-			double radius = 10 * Math.random();
-			Circle c = new Circle(radius);
-			System.out.println("Circle " + i);
-			System.out.println("Generated radius: " + radius);
-			System.out.println("Stored radius:    " + c.radius);
-			System.out.println();
-		}
-	}
-}
-```
-
 <br>
 
 [<< Previous task](task03.md) | [Practice tasks](readme.md#practice) | [Next task >>](task05.md)

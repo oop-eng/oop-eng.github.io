@@ -79,4 +79,5 @@ By the end of the course students will be expected to:
 2. [Loops and Conditionals in Java](task02.md)
 3. [Methods and Method Overloading in Java](task03.md)
 4. [Constructors in Java](task04.md)
+5. [Basic Object-Oriented Programming in Java](task05.md))
 
