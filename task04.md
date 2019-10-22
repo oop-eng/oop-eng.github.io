@@ -184,7 +184,22 @@ Capabilities:
 
 > **Hint:** Unless you have previous Java experience, I strongly recommend you build up to the solution in a piecemeal fashion. For example, first make a Circle class with a radius field only, and test it out from the main in CircleTest. Then add the getArea method, and test it. Then add in a constructor. Then test it out again. Then change the constructor to use the "this" keyword, and test yet again.
 >
-> **Hint:** The Circle class does not have a main, so you cannot execute it directly. You only directly run the CircleTest class.
+> **Hint:** The Circle class does not have a main, so you cannot execute it directly. You only directly run the CircleTest class, similar to the following.
+
+```java
+public class CircleTest {
+	public static void main(String[] args) {
+		for (int i = 0; i < 10; i++) {
+			double radius = 10 * Math.random();
+			Circle c = new Circle(radius);
+			System.out.println("Circle " + i);
+			System.out.println("Generated radius: " + radius);
+			System.out.println("Stored radius:    " + c.radius);
+			System.out.println();
+		}
+	}
+}
+```
 
 <br>
 
