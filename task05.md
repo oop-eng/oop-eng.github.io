@@ -3,9 +3,9 @@
 <span id="task_05"></span>
 ## 5. Basic Object-Oriented Programming in Java
 
-- [The Java Tutorials - What Is an Object?](https://docs.oracle.com/javase/tutorial/java/concepts/object.html).
-- [The Java Tutorials - What Is a Class?](https://docs.oracle.com/javase/tutorial/java/concepts/class.html).
-- [The Java Tutorials - What Is a Package?](https://docs.oracle.com/javase/tutorial/java/concepts/package.html).
+- [The Java Tutorials - What Is an Object?](https://docs.oracle.com/javase/tutorial/java/concepts/object.html)
+- [The Java Tutorials - What Is a Class?](https://docs.oracle.com/javase/tutorial/java/concepts/class.html)
+- [The Java Tutorials - What Is a Package?](https://docs.oracle.com/javase/tutorial/java/concepts/package.html)
 
 > **Hint:**
 > - Class names start with upper case.
