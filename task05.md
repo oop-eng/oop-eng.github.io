@@ -68,7 +68,10 @@ for(int i = 0; i < circles.length; i++) {
 }
 ```
 
-3) Create a `Rectangle` class that contains `width` and `height` fields. Also give it a `getArea` method. Again, make a few test cases using a `RectangleTest` class similar to the following.
+<span id="task_05_homework"></span>
+## Homework
+
+1) Create a `Rectangle` class that contains `width` and `height` fields. Also give it a `getArea` method. Again, make a few test cases using a `RectangleTest` class similar to the following.
 
 ```java
 public class RectangleTest {
@@ -87,10 +90,7 @@ public class RectangleTest {
 }
 ```
 
-<span id="task_05_homework"></span>
-## Homework
-
-Create a `Square` class with `width` and `getArea`. Then, give both `Square` and `Circle` `setArea` methods that let you specify a desired area. Make a few test cases using a `SquareTest` class like as the following.
+2) Create a `Square` class with `width` and `getArea`. Then, give both `Square` and `Circle` `setArea` methods that let you specify a desired area. Make a few test cases using a `SquareTest` class like as the following.
 
 ```java
 public class SquareTest {
