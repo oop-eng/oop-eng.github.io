@@ -119,5 +119,5 @@ public class SquareTest {
 
 <br>
 
-[<< Previous task](task03.md) | [Practice tasks](readme.md#practice) | [Next task >>](task05.md)
+[<< Previous task](task04.md) | [Practice tasks](readme.md#practice) | [Next task >>](task06.md)
 
