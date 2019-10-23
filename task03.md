@@ -82,7 +82,7 @@ class Main {
 			int[] expected = { 1, 4, 9, 16, 25 };
 			One.power(actual, y);
 			// Is the 'expected' equal to the 'actual'?
-			assert Arrays.compare(expected, actual) == 0 : "expected = " + Arrays.toString(expected) + " but actual = "
+			assert Arrays.equals(expected, actual) : "expected = " + Arrays.toString(expected) + " but actual = "
 					+ Arrays.toString(actual);
 		}
 		System.out.println("Done.");
