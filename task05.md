@@ -87,7 +87,10 @@ public class RectangleTest {
 }
 ```
 
-4) Create a `Square` class with `width` and `getArea`. Then, give both `Square` and `Circle` `setArea` methods that let you specify a desired area. Make a few test cases using a `SquareTest` class like as the following.
+<span id="task_05_homework"></span>
+## Homework
+
+Create a `Square` class with `width` and `getArea`. Then, give both `Square` and `Circle` `setArea` methods that let you specify a desired area. Make a few test cases using a `SquareTest` class like as the following.
 
 ```java
 public class SquareTest {
