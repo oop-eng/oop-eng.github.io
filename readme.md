@@ -80,5 +80,5 @@ By the end of the course students will be expected to:
 3. [Methods and Method Overloading in Java](task03.md)
 4. [Constructors in Java](task04.md)
 5. [Basic Object-Oriented Programming in Java](task05.md)
-6. [Object-Oriented Programming: Inheritance](task07.md).
+6. [Object-Oriented Programming: Inheritance](task06.md).
 
