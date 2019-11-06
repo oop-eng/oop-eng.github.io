@@ -86,6 +86,12 @@ public class SquareTest {
 }
 ```
 
+> **Note:**
+> - Make all instance variables (fields) private. Hook them to the outside with `getXxx` and/or `setXxx`.
+> - Use JavaDoc-style comments from the very beginning.
+> - Put all code in packages.
+> - Make output more readable by implementing toString.
+
 <br>
 
 [<< Previous task](task05.md) | [Practice tasks](readme.md#practice) | [Next task >>](task07.md)
