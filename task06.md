@@ -8,10 +8,7 @@
 - [JavaDoc](https://en.wikipedia.org/wiki/Javadoc).
 - [How to Write Doc Comments for the Javadoc Tool](https://www.oracle.com/technetwork/java/javase/tech/index-137868.html).
 
-> **Hint:**
-> - Class names start with upper case.
-> - Names for methods, variables, and packages start with lower case.
-> - Indent nested blocks consistently.
+> **Note:** Make your code follow the [coding standards](https://en.wikipedia.org/wiki/Naming_convention_(programming)#Java).
 
 1) Copy your `shapes` Eclipse project and give it a new name.
 
