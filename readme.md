@@ -81,7 +81,7 @@ By the end of the course students will be expected to:
 4. [Constructors in Java](task04.md).
 5. [Basic Object-Oriented Programming in Java](task05.md).
 6. [Object-Oriented Programming: Inheritance](task06.md).
-7. [Object-Oriented Programming: Method Overriding](task07.md).
+7. [Object-Oriented Programming: Method Overriding, Polymorphism](task07.md).
 
 ---
 

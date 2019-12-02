@@ -1,7 +1,13 @@
 [<< Previous task](task06.md) | [Practice tasks](readme.md#practice) | [Next task >>](task08.md)
 
 <span id="task_07"></span>
-## 7. Object-Oriented Programming: Method Overriding
+## 7. Object-Oriented Programming: Method Overriding, Polymorphism.
+
+- [The Java Tutorials - Overriding and Hiding Methods](https://docs.oracle.com/javase/tutorial/java/IandI/override.html).
+- [The Java Tutorials - Polymorphism](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html).
+- [w3schools - Java Polymorphism](https://www.w3schools.com/java/java_polymorphism.asp).
+
+> **Note:** The dictionary definition of polymorphism refers to a principle in biology in which an organism or species can have many different forms or stages. This principle can also be applied to object-oriented programming and languages like the Java language. Subclasses of a class can define their own unique behaviors and yet share some of the same functionality of the parent class.
 
 1) Create and test the following classe: `Circle`, `Rectangle`, `Square`. Implement the necessary methods: `getXxx`, `setXxx`, `toString`.
 
