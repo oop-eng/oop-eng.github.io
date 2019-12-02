@@ -1,7 +1,7 @@
 [<< Previous task](task06.md) | [Practice tasks](readme.md#practice) | [Next task >>](task08.md)
 
 <span id="task_07"></span>
-## 7. Object-Oriented Programming: Method Overriding, Polymorphism.
+## 7. Object-Oriented Programming: Method Overriding, Polymorphism
 
 - [The Java Tutorials - Overriding and Hiding Methods](https://docs.oracle.com/javase/tutorial/java/IandI/override.html).
 - [The Java Tutorials - Polymorphism](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html).
