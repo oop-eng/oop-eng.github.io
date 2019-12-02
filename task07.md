@@ -9,7 +9,7 @@ Class diagram of created classes:
 
 ![shapes](shapes01.png)
 
-2) Create `ShapeUtils` class, implement the `ShapeUtils.printShapes` method, as shown below:
+2) Create `ShapeUtils` class, implement the `ShapeUtils.printShapes` method, as shown below.
 
 ```java
 public static void printShapes(Object[] shapes) {
@@ -18,7 +18,8 @@ public static void printShapes(Object[] shapes) {
 	}
 }
 ```
-3) Use the following `Main` class to test implemented functionality.
+
+3) Use the following `Main` class to test implemented functionality:
 
 ```java
 public class Main {
@@ -63,7 +64,9 @@ Square: width = 40.0
 Double sum = ShapeUtils.sumAreas(shapes);
 System.out.format("%.2f", sum);
 ```
+
 If you are using previously created shapes, you should obtain the following result:
+
 ```
 2514.16
 ```
