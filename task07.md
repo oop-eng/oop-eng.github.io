@@ -13,7 +13,12 @@
 
 Class diagram of created classes:
 
-![shapes](shapes01.png)
+![shapes](shapes0/shapes01.png)
+
+> **Examples:**
+> - [Circle.java](shapes0/Circle.java).
+> - [Rectangle.java](shapes0/Rectangle.java).
+> - [Square.java](shapes0/Square.java).
 
 2) Create `ShapeUtils` class, implement the `ShapeUtils.printShapes` method, as shown below.
 
