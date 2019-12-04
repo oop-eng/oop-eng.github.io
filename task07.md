@@ -6,6 +6,8 @@
 - [The Java Tutorials - Overriding and Hiding Methods](https://docs.oracle.com/javase/tutorial/java/IandI/override.html).
 - [The Java Tutorials - Polymorphism](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html).
 - [w3schools - Java Polymorphism](https://www.w3schools.com/java/java_polymorphism.asp).
+- [w3schools - Java Abstraction](https://www.w3schools.com/java/java_abstract.asp).
+- [w3schools - Java Interface](https://www.w3schools.com/java/java_interface.asp).
 
 > **Note:** The dictionary definition of *polymorphism* refers to a principle in biology in which an organism or species can have many different forms or stages. This principle can also be applied to object-oriented programming and languages like the Java language. Subclasses of a class can define their own unique behaviors and yet share some of the same functionality of the parent class.
 
@@ -81,6 +83,8 @@ If you are using previously created shapes, you should obtain the following resu
 ```
 2514.16
 ```
+
+> **Hint:** Use the super entity (e.g. `Shape`) with declared `getArea()` as the parent for your "geometrical" classes.
 
 <br>
 
