@@ -9,7 +9,7 @@
 
 > **Hint:** To keep your code shorter, you can have getter but not setter methods for each of those properties. Also put in a useful `toString` method. Make a few instances and print them out.
 >
-> *Note:** if you don’t understand @Override, just skip it for now. Also, remember that once you have instance variables, Eclipse can create the getters, setters (not needed here), and constructor for you. Use the *Source* menu to tell Eclipse to insert this code.
+> **Note:** if you don’t understand @Override, just skip it for now. Also, remember that once you have instance variables, Eclipse can create the getters, setters (not needed here), and constructor for you. Use the *Source* menu to tell Eclipse to insert this code.
 
 3) Make a `PaperclipSale` class to represent the sale of a set of boxes of certain types of paper clips. The class should represent the color of the clips, the per-box price, the number of those boxes being sold, and the final cost. Also put in a useful `toString` method. Make a few instances and print them out.
 
