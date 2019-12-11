@@ -14,7 +14,7 @@ public class CarSale {
  	private final double discount;
  	...
  	public double getCost() {
-		return(listPrice * (1.0 - discount/100));
+		return listPrice * (1.0 - discount / 100);
 	}
 	...
 }
