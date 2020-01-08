@@ -38,9 +38,11 @@ public class CarSale {
 
 ## Extra
 
-6) Make a `Coin` enum with instances named `HEADS` and `TAILS`.
+6) Implement the `SortAndPrint` method to arrange your sellable objects array by the price in descending order. Select the best place to put this method. Add the necessary code to demonstrate the created method.
 
-7) Make a static `flip` method that returns `Coin.HEADS` and `Coin.TAILS` with equal probability. Make a test case where you call `flip` multiple times and print out the result each time.
+7) Make a `Coin` enum with instances named `HEADS` and `TAILS`.
+
+8) Make a static `flip` method that returns `Coin.HEADS` and `Coin.TAILS` with equal probability. Make a test case where you call `flip` multiple times and print out the result each time.
 
 > **Question:** Where is the best place to put this method?
 
