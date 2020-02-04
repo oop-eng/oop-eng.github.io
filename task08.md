@@ -1,4 +1,4 @@
-[<< Previous task](task07.md) | [Practice tasks](readme.md#practice)
+[<< Previous task](task07.md) | [Practice tasks](readme.md#practice) | [Next task >>](task09.md)
 
 <span id="task_08"></span>
 ## 8. Object-Oriented Programming: Advanced Capabilities
@@ -163,5 +163,5 @@ public interface Sellable {
 
 <br>
 
-[<< Previous task](task07.md) | [Practice tasks](readme.md#practice)
+[<< Previous task](task07.md) | [Practice tasks](readme.md#practice) | [Next task >>](task09.md)
 
