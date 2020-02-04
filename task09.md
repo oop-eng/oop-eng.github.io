@@ -3,7 +3,7 @@
 <span id="task_09"></span>
 ## 9. Java Collections: Lists, Maps, Sets
 
-- [BeginnersBoo: Java Collections Framework Tutorials](https://beginnersbook.com/java-collections-tutorials/).
+- [BeginnersBook: Java Collections Framework Tutorials](https://beginnersbook.com/java-collections-tutorials/).
 - [Jenkov Aps: Java Collections Tutorial](http://tutorials.jenkov.com/java-collections/index.html).
 - [Vogella: Java Collections - Tutorial](https://www.vogella.com/tutorials/JavaCollections/article.html).
 - [Oracle: The Java Tutorials - Collections](https://docs.oracle.com/javase/tutorial/collections/index.html).
@@ -32,7 +32,7 @@
 
 ## Extra
 
-6) Do some timing tests to verify the performance claims regarding the difference between ArrayList and LinkedList for accessing the middle element.
+6) Do some timing tests to verify the performance claims regarding the difference between `ArrayList` and `LinkedList` for accessing the middle element.
 
 > **Hint:** Use `System.currentTimeMillis` or `System.nanoTime` to lookup the current time. Compute a delta and divide to get an elapsed time in seconds.
 >

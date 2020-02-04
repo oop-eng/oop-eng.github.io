@@ -83,6 +83,7 @@ By the end of the course students will be expected to:
 6. [Object-Oriented Programming: Inheritance](task06.md).
 7. [Object-Oriented Programming: Method Overriding, Polymorphism](task07.md).
 8. [Object-Oriented Programming: Advanced Capabilities](task08.md).
+9. [Java Collections: Lists, Maps, Sets](task09.md).
 
 ---
 
