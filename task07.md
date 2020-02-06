@@ -11,7 +11,7 @@
 
 > **Note:** The dictionary definition of *polymorphism* refers to a principle in biology in which an organism or species can have many different forms or stages. This principle can also be applied to object-oriented programming and languages like the Java language. Subclasses of a class can define their own unique behaviors and yet share some of the same functionality of the parent class.
 
-1) Create and test the following classe: `Circle`, `Rectangle`, `Square`. Implement the necessary methods: `getXxx`, `setXxx`, `toString`.
+1) Create and test the following classes: `Circle`, `Rectangle`, `Square`. Implement the necessary methods: `getXxx`, `setXxx`, `toString`.
 
 Class diagram of created classes:
 

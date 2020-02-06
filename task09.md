@@ -6,6 +6,8 @@
 - [BeginnersBook: Java Collections Framework Tutorials](https://beginnersbook.com/java-collections-tutorials/).
 - [Jenkov Aps: Java Collections Tutorial](http://tutorials.jenkov.com/java-collections/index.html).
 - [Vogella: Java Collections - Tutorial](https://www.vogella.com/tutorials/JavaCollections/article.html).
+- [w3schools - Java ArrayList](https://www.w3schools.com/java/java_arraylist.asp).
+- [w3schools - Java HashMap](https://www.w3schools.com/java/java_hashmap.asp).
 - [Oracle: The Java Tutorials - Collections](https://docs.oracle.com/javase/tutorial/collections/index.html).
 
 1) Make a new Eclipse project called `task09` or similar.
