@@ -55,7 +55,14 @@ System.out.printf(" Second item: %s.%n", numB);
 
 ## Extra
 
-...
+Assume that you have four variables: `name1`, `balance1`, `name2`, and `balance2`. Produce output that shows the values, but line up the balances on the decimal point. Assume that the names are 7 characters or fewer and the balances are less than $10M. For example:
+
+```
+Juanita's bank account balance is $2,345,678.99.
+   Juan's bank account balance is $   15,455.26.
+```
+
+> **Hint:** [Formatting Numeric Print Output](https://docs.oracle.com/javase/tutorial/java/data/numberformat.html).
 
 <br>
 
