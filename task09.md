@@ -34,7 +34,37 @@
 
 ## Extra
 
-6) Do some timing tests to verify the performance claims regarding the difference between `ArrayList` and `LinkedList` for accessing the middle element.
+6) Create a [comparator](https://beginnersbook.com/2017/08/comparator-interface-in-java/) to sort a **List** of *Circles* in descending order of their area. 
+```java
+class MyComparator implements Comparator<Circle> {
+	public int compare(Circle o1, Circle o2) {
+		// TODO: Implement comparison algorithm here.
+		return 0;
+	}
+}
+```
+
+Show the sorting result.
+```java
+public static void main(String[] args) {
+	List<Circle> arrayList = new ArrayList<Circle>();
+	arrayList.add(new Circle(3));
+	arrayList.add(new Circle(2));
+	arrayList.add(new Circle(1));
+	System.out.println(arrayList);
+	MyComparator myComparator = new MyComparator();
+	arrayList.sort(myComparator);
+	System.out.println(arrayList);
+}
+```
+
+Expected result:
+```
+[Circle: radius = 3.0, Circle: radius = 2.0, Circle: radius = 1.0]
+[Circle: radius = 1.0, Circle: radius = 2.0, Circle: radius = 3.0]
+```
+
+7) Do some timing tests to verify the performance claims regarding the difference between `ArrayList` and `LinkedList` for accessing the middle element.
 
 > **Hint:** Use `System.currentTimeMillis` or `System.nanoTime` to lookup the current time. Compute a delta and divide to get an elapsed time in seconds.
 >
