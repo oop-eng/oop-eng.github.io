@@ -41,7 +41,7 @@ String nameB = twoNames.getB(); // Value is "Juanita"
 System.out.printf(" First item: %s.%n", nameA);
 System.out.printf(" Second item: %s.%n", nameB);
 
-Pair<Integer> twoNums = new `Pair`<>(11, 22);
+Pair<Integer> twoNums = new Pair<>(11, 22);
 System.out.printf("twoNums=%s.%n", twoNums);
 Integer numA = twoNums.getA(); // Value is 11
 Integer numB = twoNums.getB(); // Value is 22
