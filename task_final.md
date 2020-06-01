@@ -26,6 +26,7 @@ Create a Java program to store and process customer data:
 - Search customer by name and surname.
 - Search customer by registration date.
 
+<span id="extra"></span>
 ## Extra
 
 1) Validate input data with [regular expressions](http://www.vogella.com/tutorials/JavaRegularExpressions/article.html).
@@ -42,6 +43,7 @@ Create a Java program to store and process customer data:
 
 3) Create a text menu or [JavaFX](http://docs.oracle.com/javase/8/javafx/user-interface-tutorial/) GUI to implement the operations shown [above](#requirements).
 
+<span id="examples"></span>
 ## Examples
 
 ```java
