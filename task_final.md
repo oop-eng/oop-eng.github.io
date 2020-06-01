@@ -221,7 +221,7 @@ public class CustomerProcessor {
 	}
 
 	/**
-	 * Provides sorting and searching by customer name in reverse order.
+	 * Provides sorting by customer name in reverse order.
 	 */
 	public static class NameReverseComparator implements Comparator<Customer> {
 
