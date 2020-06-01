@@ -88,8 +88,8 @@ By the end of the course students will be expected to:
 
 ---
 
-<span id="quiz"></span>
-## Quizzes
+<span id="final_task"></span>
+## Final Task
 
-1. [Java. Basic syntax, operators, variables, control statements](https://forms.gle/8FCMaqnzL1JMUvJz5).
+1. [Object Oriented Programming. Part 2](task_final.md).
 
