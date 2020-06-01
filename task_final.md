@@ -198,10 +198,12 @@ public class CustomerProcessor {
 	 * @param comparator the comparator by which the array is ordered.
 	 */
 	public Customer search(Customer customer, Comparator<Customer> comparator) {
-		int index = Arrays.binarySearch(customerArray, customer, comparator);
 		Customer result = null;
-		if (index >= 0) {
-			result = customerArray[index];
+		if (customer != null && comparator != null) {
+			int index = Arrays.binarySearch(customerArray, customer, comparator);
+			if (index >= 0) {
+				result = customerArray[index];
+			}
 		}
 		return result;
 	}
