@@ -21,7 +21,7 @@ Create a Java program to store and process customer data:
 - Delete a customer by name and surname.
 - Show all customers.
 - Sort and print all customers by surname and name.
-- Search customer by phone numbers.
+- Search customer by phone number.
 - Search customer by name and surname.
 - Search customer by registration date.
 
@@ -31,10 +31,12 @@ Create a Java program to store and process customer data:
 
 2) Save and load the customer collection to/from a file.
 
-> **Hint:** You can implement your own algorithm for writing and reading customer data to/from a file or use convenient Java SE technologies such as *Serialization of Java objects*:
->	- [Oracle: Java Object Serialization](https://docs.oracle.com/javase/8/docs/technotes/guides/serialization/examples/index.html);
->	- [Tutorials Point: Java - Serialization](https://www.tutorialspoint.com/java/java_serialization.htm);
->	- [GeeksforGeeks: Serialization and Deserialization in Java](https://www.geeksforgeeks.org/serialization-in-java/);
+> **Note:** You can implement your own algorithm for writing and reading customer data to/from a file or use convenient Java SE technologies such as *Serialization of Java objects*:
+>
+> - [Oracle: Java Object Serialization](https://docs.oracle.com/javase/8/docs/technotes/guides/serialization/examples/index.html);
+> - [Tutorials Point: Java - Serialization](https://www.tutorialspoint.com/java/java_serialization.htm);
+> - [GeeksforGeeks: Serialization and Deserialization in Java](https://www.geeksforgeeks.org/serialization-in-java/);
+>
 > or [Long Term Persistence](https://docs.oracle.com/javase/tutorial/javabeans/advanced/longpersistence.html) for [JavaBeans](https://en.wikipedia.org/wiki/JavaBeans).
 
 3) Create a text menu or [JavaFX](http://docs.oracle.com/javase/8/javafx/user-interface-tutorial/) GUI to implement the operations shown above.
