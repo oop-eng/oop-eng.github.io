@@ -11,6 +11,7 @@ Create a Java program to store and process customer data:
 - Phone numbers (array or collection of `String`, e.g. "+380661234567").
 - Registration date (`String`, in the format: "yyyy.mm.dd").
 
+<span id="requirements"></span>
 ## Requirements
 
 1) Create your own generic collection based on an *array* or *linked list*. Or you can use classes from the [Java Collections Framework](https://docs.oracle.com/javase/8/docs/technotes/guides/collections/).
@@ -39,7 +40,7 @@ Create a Java program to store and process customer data:
 >
 > or [Long Term Persistence](https://docs.oracle.com/javase/tutorial/javabeans/advanced/longpersistence.html) for [JavaBeans](https://en.wikipedia.org/wiki/JavaBeans).
 
-3) Create a text menu or [JavaFX](http://docs.oracle.com/javase/8/javafx/user-interface-tutorial/) GUI to implement the operations shown above.
+3) Create a text menu or [JavaFX](http://docs.oracle.com/javase/8/javafx/user-interface-tutorial/) GUI to implement the operations shown [above](#requirements).
 
 <br>
 
