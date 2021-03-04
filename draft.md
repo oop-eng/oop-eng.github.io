@@ -97,18 +97,6 @@ class StudentContainer {
 	}
 
 	/**
-	 * Removes the element at the specified position in this container. Shifts any
-	 * subsequent elements to the left (subtracts one from their indices).
-	 *
-	 * @param index the index of the element to be removed
-	 * @return the element that was removed from the list
-	 */
-	public Student remove(int index) {
-		// TODO: Add your implementation here.
-		return null;
-	}
-
-	/**
 	 * Removes all of the elements from this container. The container will be empty
 	 * after this call returns.
 	 */
@@ -136,6 +124,18 @@ class StudentContainer {
 	 * @return the element previously at the specified position
 	 */
 	public Student set(int index, Student element) {
+		// TODO: Add your implementation here.
+		return null;
+	}
+
+	/**
+	 * Removes the element at the specified position in this container. Shifts any
+	 * subsequent elements to the left (subtracts one from their indices).
+	 *
+	 * @param index the index of the element to be removed
+	 * @return the element that was removed from the list
+	 */
+	public Student remove(int index) {
 		// TODO: Add your implementation here.
 		return null;
 	}
