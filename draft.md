@@ -64,21 +64,21 @@ class StudentContainer {
 	private Student[] array = new Student[0];
 
 	void add(Student object) {
-		// ***************************************************
+		// **********************************************
 		Student[] old = array;
 		array = new Student[old.length + 1];
 		for (int i = 0; i < old.length; ++i) {
 			array[i] = old[i];
 		}
-		// ***************************************************
-		// Try using Arrays.copyOf instead of the above code.
-		// ***************************************************
+		// **********************************************
+		// Use Arrays.copyOf() instead of the above code.
+		// **********************************************
 		array[old.length] = object;
 	}
 
 	@Override
 	public String toString() {
-		return "StudentContainer:\n" + Arrays.toString(array);
+		return Arrays.toString(array);
 	}
 }
 ```
