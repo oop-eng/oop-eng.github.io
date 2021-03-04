@@ -152,7 +152,8 @@ class StudentContainer {
 	 *         sequence
 	 */
 	public Student[] toArray() {
-		return Arrays.copyOf(array, array.length);
+		// TODO: Add your implementation here.
+		return null;
 	}
 ```
 
