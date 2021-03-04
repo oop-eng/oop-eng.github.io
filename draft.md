@@ -82,7 +82,7 @@ class StudentContainer {
 }
 ```
 
-2) Try to add the following methods:
+2) Add and implement the following methods:
 
 ```java
 	/**
@@ -93,7 +93,7 @@ class StudentContainer {
 	 * @return the element that was removed from the list
 	 */
 	public Student remove(int index) {
-		// Add your implementation here.
+		// TODO: Add your implementation here.
 		return null;
 	}
 
@@ -102,7 +102,7 @@ class StudentContainer {
 	 * after this call returns.
 	 */
 	public void clear() {
-		// Add your implementation here.
+		// TODO: Add your implementation here.
 	}
 
 	/**
@@ -112,7 +112,7 @@ class StudentContainer {
 	 * @return the element at the specified position in this container
 	 */
 	public Student get(int index) {
-		// Add your implementation here.
+		// TODO: Add your implementation here.
 		return null;
 	}
 
@@ -125,7 +125,7 @@ class StudentContainer {
 	 * @return the element previously at the specified position
 	 */
 	public Student set(int index, Student element) {
-		// Add your implementation here.
+		// TODO: Add your implementation here.
 		return null;
 	}
 ```
