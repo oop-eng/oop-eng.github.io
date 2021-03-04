@@ -32,6 +32,7 @@
 ### 2. Java Collections: Converting to an array, removing elements
 
 1) Create new collection using all elements of the array.
+
 2) Remove from the collection all students whose gradebook number begins and ends with one.
 
 ### 3. Java Collections: HashMap, TreeMap
