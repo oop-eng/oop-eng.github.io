@@ -139,6 +139,21 @@ class StudentContainer {
 		// TODO: Add your implementation here.
 		return null;
 	}
+	
+	/**
+	 * Returns an array containing all of the elements in this container in proper
+	 * sequence (from first to last element).
+	 * <p>
+	 * The returned array must be "safe", that is, this container cannot maintain
+	 * any references to it. In other words, this method must allocate a new array.
+	 * The caller is thus free to modify the returned array.
+	 *
+	 * @return an array containing all of the elements in this container in proper
+	 *         sequence
+	 */
+	public Student[] toArray() {
+		return Arrays.copyOf(array, array.length);
+	}
 ```
 
 <br>
