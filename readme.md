@@ -88,6 +88,13 @@ By the end of the course students will be expected to:
 
 ---
 
+<span id="classroom"></span>
+## Classroom activities
+
+[Draft](draft.md).
+
+---
+
 <span id="final_task"></span>
 ## Final Task
 
