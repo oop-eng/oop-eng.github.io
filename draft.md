@@ -87,6 +87,16 @@ class StudentContainer {
 
 ```java
 	/**
+	 * Returns the number of elements in this list.
+	 *
+	 * @return the number of elements in this list
+	 */
+	public int size() {
+		// TODO: Add your implementation here.
+		return -1;
+	}
+
+	/**
 	 * Removes the element at the specified position in this container. Shifts any
 	 * subsequent elements to the left (subtracts one from their indices).
 	 *
