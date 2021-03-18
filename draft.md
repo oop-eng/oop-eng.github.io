@@ -64,16 +64,13 @@ class StudentContainer {
 	private Student[] array = new Student[0];
 
 	void add(Student object) {
-		// **********************************************
 		Student[] old = array;
 		array = new Student[old.length + 1];
 		for (int i = 0; i < old.length; ++i) {
 			array[i] = old[i];
 		}
-		// **********************************************
-		// Use Arrays.copyOf() instead of the above code.
-		// **********************************************
 		array[old.length] = object;
+		// Try using Arrays.copyOf() instead of the above code.
 	}
 
 	@Override
@@ -83,9 +80,12 @@ class StudentContainer {
 }
 ```
 
-2) Add and implement the following methods:
+2) Create and test `StudentContainer` object then add and implement the following methods:
 
 ```java
+class StudentContainer {
+	...
+
 	/**
 	 * Returns the number of elements in this list.
 	 *
@@ -155,6 +155,80 @@ class StudentContainer {
 		// TODO: Add your implementation here.
 		return null;
 	}
+}
+```
+
+### 5. Java Collections: Making custom collection class iterable
+
+To access the elements of a collection, we can either use an index if the collection is based on an array, or we need to traverse the collection from its beginning, element by element.
+
+`Iterator` is an interface and it is part of java collection framework. It is used to traverse a collection in forward direction, enabling you to remove or modify the elements of the collection.
+
+Each collection classes provide `iterator()` method to return an **iterator**.
+
+So let's make your collection class **iterable**.
+
+1) Implement the `Iterable` interface:
+
+```java
+class StudentContainer implements Iterable<Student> {
+	...
+	@Override
+	public Iterator<Student> iterator() {
+		return new StudentIterator();
+	}
+}
+```
+
+2) Create private inner class `StudentIterator` inside `StudentContainer`:
+
+```java
+class StudentContainer implements Iterable<Student> {
+	...
+	private class StudentIterator implements Iterator<Student> {
+
+		// Add some fields here if needed.
+		// ...
+		
+		/**
+		 * Returns "true" if the iteration has more elements.
+		 *
+		 * @return "true" if the iteration has more elements
+		 */
+		public boolean hasNext() {
+			// Add your implementation here.
+			return false;
+		}
+
+		/**
+		 * Returns the next element in the iteration.
+		 *
+		 * @return the next element in the iteration
+		 */
+		public Student next() {
+			// Add your implementation here.
+			return null;
+		}
+	};
+}
+```
+
+Test it:
+
+```java
+Iterator<Student> iterator = container.iterator();
+while (iterator.hasNext()) {
+	Student student = iterator.next();
+	System.out.println(student);
+}
+```
+
+Try to use a `foreach` loop:
+
+```java
+for (Student student : container) {
+	System.out.println(student);
+}
 ```
 
 <br>
