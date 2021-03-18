@@ -136,7 +136,11 @@ class StudentContainer {
 	 * @return the element that was removed from the list
 	 */
 	public Student remove(int index) {
+		if (index < 0 || index >= array.length) {
+			throw new ArrayIndexOutOfBoundsException(index);
+		}
 		// TODO: Add your implementation here.
+		// Try to use System.arraycopy() whenever possible.
 		return null;
 	}
 	
