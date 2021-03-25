@@ -235,6 +235,52 @@ for (Student student : container) {
 }
 ```
 
+3) Add the `remove()` method to your `StudentIterator`:
+
+```java
+class StudentContainer implements Iterable<Student> {
+	...
+	private class StudentIterator implements Iterator<Student> {
+		...
+
+		/**
+		 * Removes the last element returned by this iterator. This method can be called
+		 * only once per call to next().
+		 */
+		public void remove() {
+			// Add your implementation here.
+		}
+	}
+}
+```
+
+Test it:
+
+```java
+Iterator<Student> iterator = container.iterator();
+while (iterator.hasNext()) {
+	iterator.next();
+	iterator.remove();
+}
+System.out.println(container.size()); 
+System.out.println(container);
+```
+
+Add **ten** students to your container.
+
+Then remove students with an **odd sum of digits** in the gradebook number using `iterator()`. To do this, use something like the following code:
+
+```java
+iterator = container.iterator();
+while (iterator.hasNext()) {
+	Student student = iterator.next();
+	if (...) {
+		iterator.remove();
+	}
+}
+System.out.println(container);
+```
+
 <br>
 
 [<< Practice tasks](readme.md#practice)
