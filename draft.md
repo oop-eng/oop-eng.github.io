@@ -281,6 +281,104 @@ while (iterator.hasNext()) {
 System.out.println(container);
 ```
 
+### 6. Java Collections: Make custom collection class generic
+
+We now have a simple and very useful :) custom container.
+But it can be used to manage objects of the `Student` class only.
+
+Let's improve it so that it can be used to store any type of user data. 
+I mean, let's make our container work not only with students, but with any other custom classes as well.
+
+For this we will use **Generics**.
+Using Generics, we can create a single class or method that automatically works with any types of data (not only Student).
+
+1) Create a **new java project** and copy the previously created `Student` and `StudentContainer` into it.
+
+2) Rename the `StudentContainer` to `Container` and make it **generic**. Modify its code to work with any type of objects used as elements. Сhange the implementation of some methods, if necessary:
+
+```java
+class Container<E> {
+	private Object[] array = new Object[0];
+	...
+	void add(E element) {
+		...
+	}
+
+	public E get(int index) {
+		...
+	}
+	
+	public E set(int index, E element) {
+		...
+	}
+	
+	public E remove(int index) {
+		...
+	}
+}	
+```
+
+3) Test your generic container with the previously created `Student` class using something like the following code:
+
+```java
+Container<Student> container = new Container<>();
+container.add(new Student(...));
+container.add(new Student(...));
+container.add(new Student(...));
+System.out.println(container);
+System.out.println(container.set(1, new Student(...)));
+System.out.println(container);
+System.out.println(container.remove(2));
+System.out.println(container);
+container.remove(0);
+System.out.println(container);
+System.out.println(Arrays.toString(container.toArray()));
+```
+
+4) Test the container with the `String` objects.
+
+```java
+Container<String> str = new Container<>();
+str.add("ccc");
+str.add("bbb");
+str.add("aaa");
+System.out.println(str);
+System.out.println(str.set(0, "zzz"));
+System.out.println(str);
+System.out.println(str.remove(2));
+System.out.println(str);
+```
+
+5) Create a new simple data class like the following:
+
+```java
+class One {
+	public final int i;
+
+	public One(int i) {
+		this.i = i;
+	}
+
+	public String toString() {
+		return Integer.toString(i);
+	}
+}
+```
+
+and test the container with its objects.
+
+```java
+Container<One> one = new Container<>();
+one.add(new One(1));
+one.add(new One(2));
+one.add(new One(3));
+System.out.println(one);
+System.out.println(one.set(1, new One(999)));
+System.out.println(one);
+System.out.println(one.remove(2));
+System.out.println(one);
+```
+
 <br>
 
 [<< Practice tasks](readme.md#practice)
