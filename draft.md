@@ -419,6 +419,28 @@ one.addAll(Arrays.asList(new One(222), new One(777), new One(555)));
 System.out.println(one);
 ```
 
+7) Implement the `sort()` method:
+
+```java
+class Container<E> {
+	...
+
+	/**
+	 * Sorts this list according to the order induced by the specified
+	 * {@link Comparator}.
+	 * 
+	 * @param c the Comparator used to compare list elements. A null value indicates
+	 *          that the Comparable elements should be used.
+	 */
+	@SuppressWarnings("unchecked")
+	void sort(Comparator<E> c) {
+		// Here you can use the sorting method from the Java library.
+	}
+}
+```
+
+and test sorting with all the object types you have used before (`Student`, `String`, `One`).
+
 <br>
 
 [<< Practice tasks](readme.md#practice)
