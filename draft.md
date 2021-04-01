@@ -398,7 +398,7 @@ class Container<E> {
 			return false;
 		}
 		// Add your implementation here.
-		// You cam use System.arraycopy()
+		// Hint: It is convenient to use System.arraycopy()
 		// ...
 		return true;
 	}
