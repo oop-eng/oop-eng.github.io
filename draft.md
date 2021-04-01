@@ -379,6 +379,46 @@ System.out.println(one.remove(2));
 System.out.println(one);
 ```
 
+6) Implement the `addAll()` method:
+
+```java
+class Container<E> {
+	...
+
+	/**
+	 * Appends all of the elements in the specified collection to the end of this
+	 * container.
+	 *
+	 * @param c collection containing elements to be added to this container
+	 * @return "true" if this container changed as a result of the call
+	 */
+	public boolean addAll(Collection<? extends E> c) {
+		Object[] a = c.toArray();
+		if (a.length == 0) {
+			return false;
+		}
+		// Add your implementation here.
+		// You cam use System.arraycopy()
+		// ...
+		return true;
+	}
+}
+```
+
+and test it:
+
+```
+Container<String> str = new Container<>();
+...
+str.addAll(Arrays.asList("ddd", "fff", "eee"));
+System.out.println(str);
+...
+Container<One> one = new Container<>();
+...
+one.addAll(Arrays.asList(new One(222), new One(777), new One(555)));
+System.out.println(one);
+```
+
 <br>
 
 [<< Practice tasks](readme.md#practice)
