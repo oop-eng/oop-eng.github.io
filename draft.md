@@ -489,6 +489,38 @@ System.out.println(one.size());
 System.out.println(one);
 ```
 
+9) Test the container with `Integer` objects.
+
+Create a new container for `Integer` objects and add some integers to the container.
+
+```java
+Container<Integer> intContainer = new Container<>();
+intContainer.addAll(
+	Arrays.asList(
+		Integer.valueOf(0xFF),
+		Integer.valueOf(0x121),
+		Integer.valueOf(0xE00E),
+		Integer.valueOf(0xE0E0),
+		Integer.valueOf(0x0E0)
+	)
+);
+System.out.println(intContainer);
+```
+
+Use `SimpleIterator.remove()` to remove from the container all elements that are **palindromes** in **hexadecimal** (which reads the same backward as forward, such as `FF` or `121`).
+
+For example:
+
+```
+Initial container: [255, 289, 57358, 57568, 224].
+   - remove 255 -> 0xFF,
+   - remove 289 -> 0x121,
+   - remove 57358 -> 0xE00E,
+   - don't remove 57568 -> 0xE0E0,
+   - don't remove 224 -> 0xE0
+Result: [57568, 224]
+```
+
 <br>
 
 [<< Practice tasks](readme.md#practice)
