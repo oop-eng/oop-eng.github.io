@@ -441,6 +441,54 @@ class Container<E> {
 
 and test sorting with all the object types you have used before (`Student`, `String`, `One`).
 
+8) Make your container iterable by using the private inner `SimpleIterator` class.
+
+```java
+class Container<E> implements Iterable<E> {
+	...
+
+	@Override
+	public Iterator<E> iterator() {
+		return new SimpleIterator();
+	}
+
+	private class SimpleIterator implements Iterator<E> {
+		// Add some fields here if needed.
+		...
+		public boolean hasNext() {
+			...
+		}
+		public E next() {
+			...
+		}
+		public void remove() {
+			...
+		}
+	}
+}
+```
+
+and test it:
+
+```java
+Container<One> one = new Container<>();
+...
+System.out.println(one);
+Iterator<One> iterator = one.iterator();
+while (iterator.hasNext()) {
+	One x = iterator.next();
+	System.out.println(x);
+}
+...
+iterator = one.iterator();
+while (iterator.hasNext()) {
+	iterator.next();
+	iterator.remove();
+}
+System.out.println(one.size());
+System.out.println(one);
+```
+
 <br>
 
 [<< Practice tasks](readme.md#practice)
