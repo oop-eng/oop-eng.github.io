@@ -407,7 +407,7 @@ class Container<E> {
 
 and test it:
 
-```
+```java
 Container<String> str = new Container<>();
 ...
 str.addAll(Arrays.asList("ddd", "fff", "eee"));
@@ -533,15 +533,12 @@ Each thread is associated with an instance of the class `Thread`. An application
 
 ```java
 public class HelloRunnable implements Runnable {
-
-    public void run() {
-        System.out.println("Hello from a thread!");
-    }
-
-    public static void main(String args[]) {
-        (new Thread(new HelloRunnable())).start();
-    }
-
+	public void run() {
+		System.out.println("Hello from a thread!");
+	}
+	public static void main(String args[]) {
+		(new Thread(new HelloRunnable())).start();
+	}
 }
 ```
 
@@ -549,19 +546,16 @@ public class HelloRunnable implements Runnable {
 
 ```java
 public class HelloThread extends Thread {
-
-    public void run() {
-        System.out.println("Hello from a thread!");
-    }
-
-    public static void main(String args[]) {
-        (new HelloThread()).start();
-    }
-
+	public void run() {
+		System.out.println("Hello from a thread!");
+	}
+	public static void main(String args[]) {
+		(new HelloThread()).start();
+	}
 }
 ```
 
-> Notice that both examples invoke `Thread.start` in order to start the new thread.
+> **Note:** Both examples invoke `Thread.start` in order to start the new thread.
 
 Which of these idioms should you use?
 
