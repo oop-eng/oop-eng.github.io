@@ -521,6 +521,61 @@ Initial container: [255, 289, 57358, 57568, 224].
 Result: [57568, 224]
 ```
 
+### 7. Java Threads: Defining and starting a thread
+
+**Multithreading** in Java is a process of executing multiple threads simultaneously. This is also known as **Concurrency** in Java.
+
+A **thread** is a lightweight sub-process, the smallest unit of processing.
+
+Each thread is associated with an instance of the class `Thread`. An application that creates an instance of `Thread` must provide the code that will run in that thread. There are two ways to do this:
+
+- Provide a `Runnable` object. The `Runnable` interface defines a single method, `run`, meant to contain the code executed in the thread. The `Runnable` object is passed to the `Thread` constructor:
+
+```java
+public class HelloRunnable implements Runnable {
+
+    public void run() {
+        System.out.println("Hello from a thread!");
+    }
+
+    public static void main(String args[]) {
+        (new Thread(new HelloRunnable())).start();
+    }
+
+}
+```
+
+- Subclass `Thread`. The `Thread` class itself implements `Runnable`, though its `run` method does nothing. An application can subclass `Thread`, providing its own implementation of `run`:
+
+```java
+public class HelloThread extends Thread {
+
+    public void run() {
+        System.out.println("Hello from a thread!");
+    }
+
+    public static void main(String args[]) {
+        (new HelloThread()).start();
+    }
+
+}
+```
+
+> Notice that both examples invoke `Thread.start` in order to start the new thread.
+
+Which of these idioms should you use?
+
+	- The first idiom, which employs a `Runnable` object, is more general, because the `Runnable` object can subclass a class other than `Thread`.
+	- The second idiom is easier to use in simple applications, but is limited by the fact that your task class must be a descendant of `Thread`.
+
+The following tasks focus on the first approach, which separates the `Runnable` task from the `Thread` object that executes the task.
+
+1) Using the `Runnable` interface, create **5** new threads, each with the name of the current thread displayed **20** times.
+
+2) Add a delay for displaying messages. For each message, set the delay time randomly in the range of **100** to **1000** milliseconds.
+
+3) Set a fixed delay of **300** milliseconds for each message. Measure the sequential (non-parallel) and parallel execution times.
+
 <br>
 
 [<< Practice tasks](readme.md#practice)
