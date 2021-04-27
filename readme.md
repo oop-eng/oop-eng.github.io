@@ -81,6 +81,7 @@ By the end of the course students will be expected to:
 8. [Object-Oriented Programming: Advanced Capabilities](task08.md).
 9. [Java Collections: Lists, Maps, Sets](task09.md).
 10. [Generics in Java](task10.md).
+11. [Java Threads: Defining and starting a thread](task11.md).
 
 ---
 
