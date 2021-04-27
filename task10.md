@@ -1,4 +1,4 @@
-[<< Previous task](task09.md) | [Practice tasks](readme.md#practice)
+[<< Previous task](task09.md) | [Practice tasks](readme.md#practice) | [Next task >>](task11.md)
 
 <span id="task_10"></span>
 ## 10. Generics in Java
@@ -66,5 +66,5 @@ Juanita's bank account balance is $2,345,678.99.
 
 <br>
 
-[<< Previous task](task09.md) | [Practice tasks](readme.md#practice)
+[<< Previous task](task09.md) | [Practice tasks](readme.md#practice) | [Next task >>](task11.md)
 
