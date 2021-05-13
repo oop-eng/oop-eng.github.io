@@ -571,6 +571,8 @@ The following tasks focus on the first approach, which separates the `Runnable` 
 
 3) Set a fixed delay of **300** milliseconds for each message. Measure the sequential (non-parallel) and parallel execution times.
 
+4) Create a new Java project and solve the previous task using **executors** (single-threaded executor and fixed thread pool executor).
+
 <br>
 
 [<< Practice tasks](readme.md#practice)
