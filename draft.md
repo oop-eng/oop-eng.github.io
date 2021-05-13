@@ -573,6 +573,27 @@ The following tasks focus on the first approach, which separates the `Runnable` 
 
 4) Create a new Java project and solve the previous task using **executors** (single-threaded executor and fixed thread pool executor).
 
+```java
+// Runnable task
+class MyTask implements Runnable {
+	...
+}
+...
+// Create an executor.
+ExecutorService executor = Executors.newFixedThreadPool(10);
+
+// Add a runnable task and execute it.
+Runnable task = new MyTask();
+executor.execute(task);
+
+// Wait for termination.
+executor.shutdown();
+do {
+	System.out.println(Thread.currentThread().getName() + ": waiting...");
+	executor.awaitTermination(10, TimeUnit.SECONDS);
+} while (!executor.isTerminated());
+```
+
 <br>
 
 [<< Practice tasks](readme.md#practice)
