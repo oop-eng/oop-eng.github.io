@@ -85,7 +85,7 @@ public class ArrayEx {
 }
 ```
 
-Implement the `printArray` method to print an array to the screen. You should obtain the following result:
+5) Implement the `printArray` method to print an array to the screen. You should obtain the following result:
 
 ```
 Array: {1.1, 2.2, 3.3}
@@ -95,7 +95,7 @@ calcSum3(): 6.6
 calcSum4(): 6.6
 ```
  
-Add a method named `calcAverage` that, given an array of doubles, will return the average value.
+6) Add a method named `calcAverage` that, given an array of doubles, will return the average value.
 
 ```java
 public static double calcAverage(double[] numbers) {
@@ -108,7 +108,7 @@ public static double calcAverage(double[] numbers) {
 >
 > For example, given the array already made inside `main` (containing `1.1`, `2.2`, and `3.3`), calling `calcAverage(numbers)` will return `2.1999...` (almost `2.2`, but not exactly, due to roundoff error).
 
-5) Add a method named `numPositive` that, given an array of doubles, will return the count (int) of how many of them are
+7) Add a method named `numPositive` that, given an array of doubles, will return the count (int) of how many of them are
 greater than or equal to zero.
 
 ```java
@@ -121,7 +121,7 @@ public static int numPositive(double[] numbers) {
 
 > For example, given the array already made inside main, calling `numPositive(numbers)` will output `3`. Add a few negative numbers to the array and verify that you still get `3`. Add a new positive number and verify that you now get `4`.
 
-6) Add a method named `numInRange` that, given an array of numbers, a lower bound, and an upper bound, will return the count of how many of the array entries are between the two bounds, inclusive.
+8) Add a method named `numInRange` that, given an array of numbers, a lower bound, and an upper bound, will return the count of how many of the array entries are between the two bounds, inclusive.
 
 ```java
 public static int numInRange(double[] nums, double lowerBound, double upperBound) {
@@ -133,7 +133,7 @@ public static int numInRange(double[] nums, double lowerBound, double upperBound
 
 > For example, given the array already made inside main (containing `1.1`, `2.2`, and `3.3`), calling `numInRange(numbers, 1.1, 3.1)` should return `2`.
 
-7) Add the following code to `main()` to test all implemented methods:
+9) Add the following code to `main()` to test all implemented methods:
 
 ```java
 System.out.println("Average of {1.1,2.2,3.3} = " + calcAverage(numbers));
