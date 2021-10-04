@@ -1,7 +1,7 @@
 [<< Previous task](task03.md) | [Practice tasks](readme.md#practice) | [Next task >>](task05.md)
 
 <span id="task_04"></span>
-## 3. Methods and Method Overloading in Java
+## 4. Methods and Method Overloading in Java
 
 - [Java Methods](https://www.tutorialspoint.com/java/java_methods.htm).
 - [Java Methods](https://www.w3schools.com/java/java_methods.asp).

@@ -18,13 +18,8 @@ Create a new Eclipse project named `task03`. Use a package named `ua.khpi.oop.yo
 
 > **Hint:** Declare and allocate array in one fell swoop:
 > ```java
-> type[] var = { val1, val2, ... , valN };
-> ```
->
-> **Examples:**
-> ```java
 > int[] values = { 10, 100, 1_000 };
-> String[] names = {"Joe", "Jane", "Juan"};
+> String[] names = { "Joe", "Jane", "Juan" };
 > ```
 
 3) Make a new class whose main method creates an array of **N** random numbers. Use two-step array allocation. After the array has been created, loop down the array, calculate and print out the following:
@@ -34,14 +29,9 @@ Create a new Eclipse project named `task03`. Use a package named `ua.khpi.oop.yo
 - the sum of the positive values,
 - the sum of the square roots of the values.
 
-> **Hint:** Building arrays in two steps.
+> **Hint:** Building arrays in two steps:
 >
-> - Step 1: allocate an empty array (really array of references):
-> ```java
-> Type[] var = new Type[size];
-> ```
->
-> **Examples:**
+> - Step 1: allocate an empty array
 > ```java
 > int[] primes = new int[3]; // Default value is 0 for numeric arrays
 > String[] names = new String[5]; // Default value is null for Object arrays
