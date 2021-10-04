@@ -1,90 +1,96 @@
 [<< Previous task](task06.md) | [Practice tasks](readme.md#practice) | [Next task >>](task08.md)
 
 <span id="task_07"></span>
-## 7. Object-Oriented Programming: Method Overriding, Polymorphism
+## 7. Object-Oriented Programming: Inheritance
 
-- [The Java Tutorials - Overriding and Hiding Methods](https://docs.oracle.com/javase/tutorial/java/IandI/override.html).
-- [The Java Tutorials - Polymorphism](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html).
-- [w3schools - Java Polymorphism](https://www.w3schools.com/java/java_polymorphism.asp).
-- [w3schools - Java Abstraction](https://www.w3schools.com/java/java_abstract.asp).
-- [w3schools - Java Interface](https://www.w3schools.com/java/java_interface.asp).
+- [The Java Tutorials - Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html).
+- [w3schools - Java Inheritance](https://www.w3schools.com/java/java_inheritance.asp).
+- [JavaDoc](https://en.wikipedia.org/wiki/Javadoc).
+- [How to Write Doc Comments for the Javadoc Tool](https://www.oracle.com/technetwork/java/javase/tech/index-137868.html).
 
-> **Note:** The dictionary definition of *polymorphism* refers to a principle in biology in which an organism or species can have many different forms or stages. This principle can also be applied to object-oriented programming and languages like the Java language. Subclasses of a class can define their own unique behaviors and yet share some of the same functionality of the parent class.
+> **Note:** Make your code follow the [coding standards](https://en.wikipedia.org/wiki/Naming_convention_(programming)#Java).
 
-1) Create and test the following classes: `Circle`, `Rectangle`, `Square`. Implement the necessary methods: `getXxx`, `setXxx`, `toString`.
+1) Copy your `shapes` Eclipse project and give it a new name.
 
-Class diagram of created classes:
+2) Change your `Circle` class so that the fields are private and you have `getXxx` and `setXxx` methods to lookup and change the values of the fields. If you have `Rectangle` and `Square` classes, change them as well.
 
-![shapes](shapes0/shapes01.png)
+> **Hint:** Remember that Eclipse can insert the **getter** and **setter** methods for you, if you want it to (see the `Source` menu).
 
-> **Examples:**
-> - [Circle.java](shapes0/Circle.java).
-> - [Rectangle.java](shapes0/Rectangle.java).
-> - [Square.java](shapes0/Square.java).
+Run some test cases where you create a few shapes and then access their areas.
 
-2) Create `ShapeUtils` class, implement the `ShapeUtils.printShapes` method, as shown below.
+3) Add some simple **JavaDoc** comments above each class, constructor, and public method.
+
+> **Hint:** Run *JavaDoc* from *Eclipse*: select the project, then go to `Project` menu and choose `Generate Javadoc...`. Once the documentation is created, look at it by opening the doc folder and dragging `index.html` onto your browser.
+
+4) If you haven’t already made a `Square` class, do so. Make your `Square` inherit from `Rectangle`, but still enforce the restriction that the `width` and the `height` are the same. 
+
+> **Hint:** Override some method(s). You will find this problem to be a bit ugly, because you have two competing interests. On the one hand, you want squares to be rectangles because they are in real life. But on the other hand, the `Rectangle` class has separate `width` and `height` accessor methods that you can’t totally get rid of in `Square`. Whatever solution you come up with, be sure it is never possible for the `width` of a `Square` to be different from its `height`.
+
+Run some test cases where you create squares, change their `width`/`height`, and then print out the various parameters.
+
+5) Add a `toString` method to each of `Circle`, `Rectangle`, and `Square`. Have the `toString` method show the relevant parameters of the object. Print out some instances of your classes, but do not explicitly call `toString` in your code.
+
+Make a few test cases using a `CircleTest`, `RectangleTest` and `SquareTest` classes like as the following.
 
 ```java
-public static void printShapes(Object[] shapes) {
-	for (Object s : shapes) {
+/**
+ * Tests some Circle capabilities. Relies on Circles having a toString that
+ * shows the radius and area.
+ */
+public class CircleTest {
+	 public static void main(String[] args) {
+		for (int i = 0; i < 10; i++) {
+			Circle c = new Circle(10 * Math.random());
+			System.out.println(c);
+		}
+	}
+}
+```
+
+```java
+/**
+ * Tests some Rectangle capabilities. Relies on Rectangles having a toString that
+ * shows the width, height, and area.
+ */
+public class RectangleTest {
+	public static void main(String[] args) {
+		for(int i = 0; i < 10; i++) {
+			Rectangle r = 
+				new Rectangle(10 * Math.random(), 20 * Math.random());
+			System.out.println(r);
+		}
+	}
+}
+```
+
+```java
+/**
+ * Tests some Square capabilities. Relies on Squares having a toString that
+ * shows the side length and area.
+ */
+public class SquareTest {
+	public static void main(String[] args) {
+		System.out.println("Creating square with side 10");
+		Square s = new Square(10);
+		System.out.println(s);
+		System.out.println("Setting width to 5");
+		s.setWidth(5);
+		System.out.println(s);
+		System.out.println("Setting height to 6");
+		s.setHeight(6);
+		System.out.println(s);
+		System.out.println("Setting area to 49");
+		s.setArea(49);
 		System.out.println(s);
 	}
 }
 ```
 
-3) Use the following `Main` class to test implemented functionality:
-
-```java
-public class Main {
-	public static void main(String[] args) {
-		Object[] shapes = { new Circle(10), new Rectangle(20, 30), new Square(40) };
-		ShapeUtils.printShapes(shapes);
-	}
-}
-```
-
-You should obtain the following result:
-
-```
-Circle: radius = 10.0
-Rectangle: width = 20.0, height = 30.0
-Square: width = 40.0
-```
-
-> **Note:** We have: Circle, Rectangle, and Square classes.
->
-> **Note:** We want to be able to:
->
-> - Call `getArea` on an instance of any of three, even if we do not know which of the three types it is.
-> - Make an array of mixed shapes and calculate the sum of the areas.
-> - Make this array-summing method flexible enough to handle future types of shapes (Triangle, Ellipse, etc.).
-
-4) Implement the `ShapeUtils.sumAreas` method, as shown below.
-
-```java
-	public static double sumAreas(Object[] shapes) {
-		double sum = 0;
-		for (Object s : shapes) {
-			// sum = sum + s.getArea(); // Illegal! Object does not have getArea
-		}
-		return (sum);
-	}
-```
-
-5) Try to make this method workable. It should return the sum of the areas of the shapes. Modify Main class to test the `ShapeUtils.sumAreas` method:
-
-```java
-Double sum = ShapeUtils.sumAreas(shapes);
-System.out.format("%.2f", sum);
-```
-
-If you are using previously created shapes, you should obtain the following result:
-
-```
-2514.16
-```
-
-> **Hint:** Use the super entity (e.g. `Shape`) with declared `getArea()` as the parent for your "geometrical" classes.
+> **Note:**
+> - Make all instance variables (fields) private. Hook them to the outside with `getXxx` and/or `setXxx`.
+> - Use JavaDoc-style comments from the very beginning.
+> - Put all code in packages.
+> - Make output more readable by implementing toString.
 
 <br>
 

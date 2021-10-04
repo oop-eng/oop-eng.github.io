@@ -1,96 +1,121 @@
 [<< Previous task](task05.md) | [Practice tasks](readme.md#practice) | [Next task >>](task07.md)
 
 <span id="task_06"></span>
-## 6. Object-Oriented Programming: Inheritance
+## 6. Basic Object-Oriented Programming in Java
 
-- [The Java Tutorials - Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html).
-- [w3schools - Java Inheritance](https://www.w3schools.com/java/java_inheritance.asp).
-- [JavaDoc](https://en.wikipedia.org/wiki/Javadoc).
-- [How to Write Doc Comments for the Javadoc Tool](https://www.oracle.com/technetwork/java/javase/tech/index-137868.html).
+- [The Java Tutorials - What Is an Object?](https://docs.oracle.com/javase/tutorial/java/concepts/object.html)
+- [The Java Tutorials - What Is a Class?](https://docs.oracle.com/javase/tutorial/java/concepts/class.html)
+- [The Java Tutorials - What Is a Package?](https://docs.oracle.com/javase/tutorial/java/concepts/package.html)
 
-> **Note:** Make your code follow the [coding standards](https://en.wikipedia.org/wiki/Naming_convention_(programming)#Java).
+> **Hint:**
+> - Class names start with upper case.
+> - Names for methods, variables, and packages start with lower case.
+> - Indent nested blocks consistently.
 
-1) Copy your `shapes` Eclipse project and give it a new name.
-
-2) Change your `Circle` class so that the fields are private and you have `getXxx` and `setXxx` methods to lookup and change the values of the fields. If you have `Rectangle` and `Square` classes, change them as well.
-
-> **Hint:** Remember that Eclipse can insert the **getter** and **setter** methods for you, if you want it to (see the `Source` menu).
-
-Run some test cases where you create a few shapes and then access their areas.
-
-3) Add some simple **JavaDoc** comments above each class, constructor, and public method.
-
-> **Hint:** Run *JavaDoc* from *Eclipse*: select the project, then go to `Project` menu and choose `Generate Javadoc...`. Once the documentation is created, look at it by opening the doc folder and dragging `index.html` onto your browser.
-
-4) If you haven’t already made a `Square` class, do so. Make your `Square` inherit from `Rectangle`, but still enforce the restriction that the `width` and the `height` are the same. 
-
-> **Hint:** Override some method(s). You will find this problem to be a bit ugly, because you have two competing interests. On the one hand, you want squares to be rectangles because they are in real life. But on the other hand, the `Rectangle` class has separate `width` and `height` accessor methods that you can’t totally get rid of in `Square`. Whatever solution you come up with, be sure it is never possible for the `width` of a `Square` to be different from its `height`.
-
-Run some test cases where you create squares, change their `width`/`height`, and then print out the various parameters.
-
-5) Add a `toString` method to each of `Circle`, `Rectangle`, and `Square`. Have the `toString` method show the relevant parameters of the object. Print out some instances of your classes, but do not explicitly call `toString` in your code.
-
-Make a few test cases using a `CircleTest`, `RectangleTest` and `SquareTest` classes like as the following.
+1) Make a new Eclipse project called `shapes` or something similar. Your eventual goal will be to make a `Circle` class with various capabilities (see below), and a test routine that makes some circles and tests them out. Put your `Circle` class and your test routine in two separate classes, like this:
 
 ```java
-/**
- * Tests some Circle capabilities. Relies on Circles having a toString that
- * shows the radius and area.
- */
+public class Circle {
+	public double radius;
+	...
+}
+```
+
+```java
 public class CircleTest {
-	 public static void main(String[] args) {
+	public static void main(String[] args) {
+		Circle c = new Circle(...);
+		...
+	}
+}
+```
+
+Capabilities:
+
+- Give the `Circle` class a `radius` field of type double.
+- Give `Circle` a `getArea` method that computes the area (Pi * r * r).
+- Give `Circle` a constructor to which you can pass the `radius`.
+- Have the constructor use the `this` keyword.
+
+> **Hint:** Unless you have previous Java experience, I strongly recommend you build up to the solution in a piecemeal fashion. For example, first make a `Circle` class with a `radius`field only, and test it out from the main in `CircleTest`. Then add the `getArea` method, and test it. Then add in a constructor. Then test it out again. Then change the constructor to use the `this` keyword, and test yet again.
+>
+> **Hint:** The `Circle` class does not have a main, so you cannot execute it directly. You only directly run the `CircleTest` class, similar to the following.
+
+```java
+public class CircleTest {
+	public static void main(String[] args) {
 		for (int i = 0; i < 10; i++) {
-			Circle c = new Circle(10 * Math.random());
-			System.out.println(c);
+			double radius = 10 * Math.random();
+			Circle c = new Circle(radius);
+			System.out.println("Circle " + i);
+			System.out.println("Generated radius: " + radius);
+			System.out.println("Stored radius:    " + c.radius);
+			System.out.println();
 		}
 	}
 }
 ```
 
+2) Modify `CircleTest` class to create an array of 100 circles, each with a random radius. Print out the sum of the areas of the circles. Also print the biggest and smallest areas.
+
+> **Hint:** Remember that in the two-step array allocation process, the following line only makes space for 100 circles (or, more technically, it allocates an array of 100 null Circle pointers), it does not create any circles: `Circle[] circles = new Circle[100];`
+>
+> **Hint:** To actually create the circles, you have to do a loop as shown below.
+
 ```java
-/**
- * Tests some Rectangle capabilities. Relies on Rectangles having a toString that
- * shows the width, height, and area.
- */
+for(int i = 0; i < circles.length; i++) {
+	circles[i] = new Circle(...);
+}
+```
+
+<span id="extra_06"></span>
+## Extra
+
+1) Create a `Rectangle` class that contains `width` and `height` fields. Also give it a `getArea` method. Again, make a few test cases using a `RectangleTest` class similar to the following.
+
+```java
 public class RectangleTest {
 	public static void main(String[] args) {
-		for(int i = 0; i < 10; i++) {
-			Rectangle r = 
-				new Rectangle(10 * Math.random(), 20 * Math.random());
-			System.out.println(r);
+		for (int i = 0; i < 10; i++) {
+			double width = 20 * Math.random();
+			double height = 10 * Math.random();
+			Rectangle r = new Rectangle(width, height);
+			System.out.println("Rectangle " + i);
+			System.out.println("Width:  " + r.width);
+			System.out.println("Height: " + r.height);
+			System.out.println("Area:   " + r.getArea());
+			System.out.println();
 		}
 	}
 }
 ```
 
+2) Create a `Square` class with `width` and `getArea`. Then, give both `Square` and `Circle` `setArea` methods that let you specify a desired area. Make a few test cases using a `SquareTest` class like as the following.
+
 ```java
-/**
- * Tests some Square capabilities. Relies on Squares having a toString that
- * shows the side length and area.
- */
 public class SquareTest {
 	public static void main(String[] args) {
-		System.out.println("Creating square with side 10");
-		Square s = new Square(10);
-		System.out.println(s);
-		System.out.println("Setting width to 5");
-		s.setWidth(5);
-		System.out.println(s);
-		System.out.println("Setting height to 6");
-		s.setHeight(6);
-		System.out.println(s);
-		System.out.println("Setting area to 49");
-		s.setArea(49);
-		System.out.println(s);
+		for (int i = 0; i < 10; i++) {
+			double width = 10 * Math.random();
+			Square s = new Square(width);
+			System.out.println("Square " + i);
+			System.out.println("Width:  " + s.width);
+			System.out.println("Area:   " + s.getArea());
+			System.out.println();
+		}
+		for (int i = 0; i < 5; i++) {
+			double area = 100 * Math.random();
+			Square s = new Square(0.0);
+			s.setArea(area);
+			System.out.println("Square " + i);
+			System.out.println("Width:          " + s.width);
+			System.out.println("Requested area: " + area);
+			System.out.println("Actual Area:    " + s.getArea());
+			System.out.println();
+		}
 	}
 }
 ```
-
-> **Note:**
-> - Make all instance variables (fields) private. Hook them to the outside with `getXxx` and/or `setXxx`.
-> - Use JavaDoc-style comments from the very beginning.
-> - Put all code in packages.
-> - Make output more readable by implementing toString.
 
 <br>
 

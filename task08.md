@@ -1,165 +1,90 @@
 [<< Previous task](task07.md) | [Practice tasks](readme.md#practice) | [Next task >>](task09.md)
 
 <span id="task_08"></span>
-## 8. Object-Oriented Programming: Advanced Capabilities
+## 8. Object-Oriented Programming: Method Overriding, Polymorphism
 
-1) Make a new Eclipse project called `task08` or similar.
+- [The Java Tutorials - Overriding and Hiding Methods](https://docs.oracle.com/javase/tutorial/java/IandI/override.html).
+- [The Java Tutorials - Polymorphism](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html).
+- [w3schools - Java Polymorphism](https://www.w3schools.com/java/java_polymorphism.asp).
+- [w3schools - Java Abstraction](https://www.w3schools.com/java/java_abstract.asp).
+- [w3schools - Java Interface](https://www.w3schools.com/java/java_interface.asp).
 
-2) Make a `CarSale` class to represent the sale of a car. The class should represent the *car name* (model), the *list price*, the *discount* in percent, and the *final cost* (calculated from the *list price* after the *discount* is applied) as shown below. Make a few instances and print them out.
+> **Note:** The dictionary definition of *polymorphism* refers to a principle in biology in which an organism or species can have many different forms or stages. This principle can also be applied to object-oriented programming and languages like the Java language. Subclasses of a class can define their own unique behaviors and yet share some of the same functionality of the parent class.
 
-```java
-public class CarSale {
-	private final String carName;
-	private final double listPrice;
- 	private final double discount;
- 	...
- 	public double getCost() {
-		return listPrice * (1.0 - discount / 100);
-	}
-	...
-}
-```
+1) Create and test the following classes: `Circle`, `Rectangle`, `Square`. Implement the necessary methods: `getXxx`, `setXxx`, `toString`.
 
-> **Hint:** To keep your code shorter, you can have *getter* but not *setter* methods for each of those properties. Also put in a useful `toString` method.
->
-> **Note:** If you don’t understand `@Override`, just skip it for now. Also, remember that once you have instance variables, Eclipse can create the *getters*, *setters* (not needed here), and *constructor* for you. Use the *Source* menu to tell Eclipse to insert this code.
+Class diagram of created classes:
 
-3) Make a `PaperclipSale` class to represent the sale of a set of boxes of certain types of paper clips. The class should represent the *color* of the clips, the *per-box price*, the *number* of those boxes being sold, and the *final cost*. Also put in a useful `toString` method. Make a few instances and print them out.
+![shapes](shapes0/shapes01.png)
 
-4) Make a static method called `cheapest` that, given an array of mixed `CarSale` and `PaperclipSale` objects, will return the item with the lowest cost. Test the method.
+> **Examples:**
+> - [Circle.java](shapes0/Circle.java).
+> - [Rectangle.java](shapes0/Rectangle.java).
+> - [Square.java](shapes0/Square.java).
 
-> **Hint:** Return `null` if given an empty array. Don’t worry about the possibility that the array might have two entries with the same cost.
->
-> **Question:** Where is the best place to put this method?
->
-> **Question:** Why was it important that your classes had meaningful `toString` methods?
-
-5) Make a static method called `totalCost` that, given an array of mixed `CarSale` and `PaperclipSale` objects, will return the *total cost* of all elements in the array. Return 0 if given an empty array. Test the method.
-
-## Extra
-
-6) Implement the `SortAndPrint` method to arrange your sellable objects array by the price in descending order. Select the best place to put this method. Add the necessary code to demonstrate the created method.
-
-7) Make a `Coin` enum with instances named `HEADS` and `TAILS`.
-
-8) Make a static `flip` method that returns `Coin.HEADS` and `Coin.TAILS` with equal probability. Make a test case where you call `flip` multiple times and print out the result each time.
-
-> **Question:** Where is the best place to put this method?
-
-## Examples
+2) Create `ShapeUtils` class, implement the `ShapeUtils.printShapes` method, as shown below.
 
 ```java
-/**
- * Represents a sale of a car (the car name, the list price in dollars, the
- * discount in percent, and the total cost in dollars after applying the
- * discount.
- */
-public class CarSale implements Sellable {
-	private final String carName;
-	private final double listPrice;
-	private final double discount;
-
-	public CarSale(String carName, double listPrice, double discount) {
-		this.carName = carName;
-		this.listPrice = listPrice;
-		this.discount = discount;
-	}
-
-	public String getCarName() { ... }
-	
-	public double getListPrice() { ... }
-
-	public double getDiscount() { ... }
-
-	@Override
-	public double getCost() {
-		return listPrice * (1.0 - discount / 100);
-	}
-
-	@Override
-	public String toString() {
-		return "CarSale: " + carName + " with list price of $" + listPrice + " and discount of " + discount + "%.";
+public static void printShapes(Object[] shapes) {
+	for (Object s : shapes) {
+		System.out.println(s);
 	}
 }
 ```
 
-```java
-/**
- * Represents a sale of boxes of paper clips (the clip color, the per-box price,
- * the number of boxes being sold, and the total price).
- */
-public class PaperclipSale implements Sellable {
-	private String color;
-	private double boxPrice;
-	private int numBoxes;
-
-	public PaperclipSale(String color, double boxPrice, int numBoxes) {
-		this.color = color;
-		this.boxPrice = boxPrice;
-		this.numBoxes = numBoxes;
-	}
-
-	public String getColor() { ... }
-
-	public double getBoxPrice() { ... }
-
-	public int getNumBoxes() { ... }
-
-	@Override
-	public double getCost() {
-		return boxPrice * numBoxes;
-	}
-
-	@Override
-	public String toString() {
-		return "PaperclipSale: " + numBoxes + " boxes of " + color + " clips at $" + boxPrice + "/box.";
-	}
-}
-```
+3) Use the following `Main` class to test implemented functionality:
 
 ```java
-/**
- * A routine to test out various SaleItem entries.
- */
-public class SalesTest {
+public class Main {
 	public static void main(String[] args) {
-		CarSale sale1 = new CarSale("Lamborghini Aventador", 400_000, 5);
-		CarSale sale2 = new CarSale("Ferrari 458 Spider", 300_000, 4);
-		PaperclipSale sale3 = new PaperclipSale("silver", 1.55, 3_000);
-		PaperclipSale sale4 = new PaperclipSale("gold", 2.56, 2_000);
-		Sellable[] sales = { sale1, sale2, sale3, sale4 };
-		System.out.println("Items for sale:");
-		for (Sellable sale : sales) {
-			System.out.println("  " + sale);
-		}
-		System.out.println("Cheapest item: " + Sellable.cheapest(sales));
-		System.out.println("Total cost: " + Sellable.totalCost(sales));
+		Object[] shapes = { new Circle(10), new Rectangle(20, 30), new Square(40) };
+		ShapeUtils.printShapes(shapes);
 	}
 }
 ```
+
+You should obtain the following result:
+
+```
+Circle: radius = 10.0
+Rectangle: width = 20.0, height = 30.0
+Square: width = 40.0
+```
+
+> **Note:** We have: Circle, Rectangle, and Square classes.
+>
+> **Note:** We want to be able to:
+>
+> - Call `getArea` on an instance of any of three, even if we do not know which of the three types it is.
+> - Make an array of mixed shapes and calculate the sum of the areas.
+> - Make this array-summing method flexible enough to handle future types of shapes (Triangle, Ellipse, etc.).
+
+4) Implement the `ShapeUtils.sumAreas` method, as shown below.
 
 ```java
-/**
- * Represents any class that has a way of computing totalCost. Also has static
- * methods that let you find the cheapest from an array of SameItem objects, and
- * to compute the total cost of an array of SameItem objects.
- */
-public interface Sellable {
-	double getCost();
-
-	public static Sellable cheapest(Sellable[] items) {
-		Sellable cheapestItem = null;
-		...
-		return cheapestItem;
+	public static double sumAreas(Object[] shapes) {
+		double sum = 0;
+		for (Object s : shapes) {
+			// sum = sum + s.getArea(); // Illegal! Object does not have getArea
+		}
+		return (sum);
 	}
-
-	public static double totalCost(Sellable[] items) {
-		double total = 0;
-		...
-		return total;
-	}
-}
 ```
+
+5) Try to make this method workable. It should return the sum of the areas of the shapes. Modify Main class to test the `ShapeUtils.sumAreas` method:
+
+```java
+Double sum = ShapeUtils.sumAreas(shapes);
+System.out.format("%.2f", sum);
+```
+
+If you are using previously created shapes, you should obtain the following result:
+
+```
+2514.16
+```
+
+> **Hint:** Use the super entity (e.g. `Shape`) with declared `getArea()` as the parent for your "geometrical" classes.
 
 <br>
 

@@ -1,64 +1,71 @@
-[<< Previous task](task10.md) | [Practice tasks](readme.md#practice)
+[<< Previous task](task10.md) | [Practice tasks](readme.md#practice) | [Next task >>](task12.md)
 
 <span id="task_11"></span>
-## 11. Java Threads: Defining and starting a thread
+## 11. Generics in Java
 
-- [Oracle: The Java Tutorials - Defining and Starting a Thread](https://docs.oracle.com/javase/tutorial/essential/concurrency/runthread.html).
-- [Jenkov Aps: Creating and Starting Java Threads](http://tutorials.jenkov.com/java-concurrency/creating-and-starting-threads.html).
+- [Jenkov Aps: Java Generics Tutorial](http://tutorials.jenkov.com/java-generics/index.html).
+- [Oracle: Generics. How They Work and Why They Are Important](https://www.oracle.com/technical-resources/articles/java/juneau-generics.html).
+- [Oracle: The Java Tutorials - Generics](https://docs.oracle.com/javase/tutorial/java/generics/why.html).
 
-1) Make a new Eclipse project called `task11`.
+1) Make a new Eclipse project called `task11` or similar and create new public class `Util`.
 
-2) Develop a program that prints a series of specified messages at specified intervals. Initial data: message **text**, **delay**, **number** of repetitions. Use the following class, add the required functionality.
-
-```java
-class PrintMessageTask implements Runnable {
-	private String text;
-	private long delay;
-	private int number;
-
-	public PrintMessageTask(String text, long delay, int number) {
-		this.text = text;
-		this.delay = delay;
-		this.number = number;
-	}
-
-	public void run() {
-		// Add your implementation here.
-		// ...
-	}
-}
-```
-
-3) Test the created class by measuring the time of printing messages:
+2) Make a static method called `getLast` to which you pass a **List** and get back the last entry of that list. If you pass it an *List* of *Strings*, you should get back a *String*. If you pass it a *List* of *Circles*, you should get back a *Circle*. E.g.:
 
 ```java
-PrintMessageTask task = new PrintMessageTask("abc", 1000, 5);
-long startTime = System.currentTimeMillis();
-task.run();
-long elapsedMillis = System.currentTimeMillis() - startTime;
-System.out.println("Time: " + elapsedMillis);
+List<Circle> listOfCircles = ...;
+Circle lastCircle = Util.getLast(listOfCircles);
+List<String> wordList = ...;
+String lastWord = Util.getLast(wordList);
 ```
 
-The result should look something like this:
+> **Hint:** Use a [Generic Methods](https://docs.oracle.com/javase/tutorial/java/generics/methods.html).
+>
+> **Hint:** It is probably easiest to test this using *Lists* of *String* and *Lists* of *Integer* so that you don’t have to copy in any other classes, but be sure that your method does not do anything specific to *String* or *Integer*.
+
+3) Make a second version of the method that support arrays ([Java Method Overloading](https://www.w3schools.com/java/java_methods_overloading.asp)). That is, you should be able to call `Util.getLast(someList)` or `Util.getLast(someArray)`.
+
+```java
+List<String> wordList = ...;
+String lastWord1 = Util.getLast(wordList);
+String[] wordArray = ...;
+String lastWord2 = Util.getLast(wordArray);
+```
+
+4) Make a class called `Pair` that stores two entries of a given type and has getter methods to retrieve them. Give it a useful `toString` method. Here are two examples of its use:
+
+```java
+Pair<String> twoNames = new Pair<>("Juan", "Juanita");
+System.out.printf("twoNames=%s.%n", twoNames);
+String nameA = twoNames.getA(); // Value is "Juan"
+String nameB = twoNames.getB(); // Value is "Juanita"
+System.out.printf(" First item: %s.%n", nameA);
+System.out.printf(" Second item: %s.%n", nameB);
+
+Pair<Integer> twoNums = new Pair<>(11, 22);
+System.out.printf("twoNums=%s.%n", twoNums);
+Integer numA = twoNums.getA(); // Value is 11
+Integer numB = twoNums.getB(); // Value is 22
+System.out.printf(" First item: %s.%n", numA);
+System.out.printf(" Second item: %s.%n", numB);
+```
+
+> **Hint:** Use a [Generic Types](https://docs.oracle.com/javase/tutorial/java/generics/types.html).
+>
+> **Hint:** Remember that *Eclipse* will help you write the *constructor*, the *getter* methods, and the `toString` method.
+
+<span id="extra_11"></span>
+## Extra
+
+Assume that you have four variables: `name1`, `balance1`, `name2`, and `balance2`. Produce output that shows the values, but line up the balances on the decimal point. Assume that the names are 7 characters or fewer and the balances are less than $10M. For example:
 
 ```
-abc
-abc
-abc
-abc
-abc
-Time: 5002
+Juanita's bank account balance is $2,345,678.99.
+   Juan's bank account balance is $   15,455.26.
 ```
 
-4) Print a series of messages in separate threads. Use a new thread for each `PrintMessageTask` object.
-
-5) Test multithreaded message printing for **20 or more** different `PrintMessageTask` objects.
-
-> **Hint:**  Use a random number generator to set parameters when creating objects.
-
-6) Stop printing messages after the specified time has elapsed.
+> **Hint:** [Formatting Numeric Print Output](https://docs.oracle.com/javase/tutorial/java/data/numberformat.html).
 
 <br>
 
-[<< Previous task](task10.md) | [Practice tasks](readme.md#practice)
+[<< Previous task](task10.md) | [Practice tasks](readme.md#practice) | [Next task >>](task12.md)
 

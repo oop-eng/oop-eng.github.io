@@ -1,121 +1,161 @@
 [<< Previous task](task04.md) | [Practice tasks](readme.md#practice) | [Next task >>](task06.md)
 
 <span id="task_05"></span>
-## 5. Basic Object-Oriented Programming in Java
+## 5. Constructors in Java
 
-- [The Java Tutorials - What Is an Object?](https://docs.oracle.com/javase/tutorial/java/concepts/object.html)
-- [The Java Tutorials - What Is a Class?](https://docs.oracle.com/javase/tutorial/java/concepts/class.html)
-- [The Java Tutorials - What Is a Package?](https://docs.oracle.com/javase/tutorial/java/concepts/package.html)
+- [The Java Tutorials - Providing Constructors for Your Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html).
+- [Java Constructors](https://www.tutorialspoint.com/java/java_constructors.htm).
+- [Constructors in Java](https://www.javatpoint.com/java-constructor).
 
-> **Hint:**
-> - Class names start with upper case.
-> - Names for methods, variables, and packages start with lower case.
-> - Indent nested blocks consistently.
+Create a new Eclipse project named `task05`. Use a package named `ua.khpi.oop.your_first_name.task05` for all created classes.
 
-1) Make a new Eclipse project called `shapes` or something similar. Your eventual goal will be to make a `Circle` class with various capabilities (see below), and a test routine that makes some circles and tests them out. Put your `Circle` class and your test routine in two separate classes, like this:
+1) Add a class called `ConstructorEx` to your package. Give it a field named `array`:
 
 ```java
-public class Circle {
-	public double radius;
-	...
+class ConstructorEx {
+	int[] array;
+}
+```
+2) Add three constructors to your class:
+
+```java
+ConstructorEx(int length) {
+	// TODO: Initialize the field "array" by creating a new array using the
+	//       specified "length".
+}
+
+ConstructorEx(int[] srcArray) {
+	// TODO: Initialize the "array" field with the reference
+	//       to the specified "srcArray".
+}
+
+ConstructorEx(int[] srcArray, boolean copyArray) {
+	// TODO: Initialize the "array" field by reference to the specified "srcArray"
+	//       or by copying the contents of the "srcArray" depending on the "copyArray" flag.
 }
 ```
 
+3) Use the following class `Main` to test the implemented constructors of class `ConstructorEx`.
+
 ```java
-public class CircleTest {
+public class Main {
+
 	public static void main(String[] args) {
-		Circle c = new Circle(...);
-		...
+		System.out.println("Begin...");
+
+		ConstructorEx a = new ConstructorEx(3);
+		System.out.println(Arrays.toString(a.array));
+		System.out.println("---");
+
+		int[] array = new int[5];
+
+		ConstructorEx b = new ConstructorEx(array);
+		Arrays.fill(array, 1);
+		System.out.println(Arrays.toString(array));
+		System.out.println(Arrays.toString(b.array));
+		System.out.println("---");
+
+		Arrays.fill(array, 2);
+		System.out.println(Arrays.toString(array));
+		System.out.println(Arrays.toString(b.array));
+		System.out.println("---");
+
+		ConstructorEx c = new ConstructorEx(array, true);
+		Arrays.fill(array, 3);
+		System.out.println(Arrays.toString(array));
+		System.out.println(Arrays.toString(c.array));
+		System.out.println("---");
+
+		ConstructorEx d = new ConstructorEx(array, false);
+		Arrays.fill(array, 4);
+		System.out.println(Arrays.toString(array));
+		System.out.println(Arrays.toString(d.array));
+
+		System.out.println("Done.");
+	}
+
+}
+```
+
+You should obtain the following result:
+
+```
+Begin...
+[0, 0, 0]
+---
+[1, 1, 1, 1, 1]
+[1, 1, 1, 1, 1]
+---
+[2, 2, 2, 2, 2]
+[2, 2, 2, 2, 2]
+---
+[3, 3, 3, 3, 3]
+[2, 2, 2, 2, 2]
+---
+[4, 4, 4, 4, 4]
+[4, 4, 4, 4, 4]
+Done.
+```
+
+<span id="extra_05"></span>
+## Extra
+
+- [The Java Tutorials - Providing Constructors for Your Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html).
+- [The Java Tutorials - Using the this Keyword](https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html).
+- [The Java Tutorials - Controlling Access to Members of a Class](https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html).
+
+
+1) Fix the compilation errors of the following program.
+
+```java
+class One {
+	private int x;
+
+	void One() {
+		System.out.println("One::One()");
+		this(999);
+	}
+
+	One(int x) {
+		System.out.println("One::One(int)");
+		x = this.x;
+	}
+
+	private One getInstance() {
+		return null;
 	}
 }
 ```
 
-Capabilities:
+2) Use the following `Main` class to test the implementation of the `One` class.
 
-- Give the `Circle` class a `radius` field of type double.
-- Give `Circle` a `getArea` method that computes the area (Pi * r * r).
-- Give `Circle` a constructor to which you can pass the `radius`.
-- Have the constructor use the `this` keyword.
+```java
+public class Main {
 
-> **Hint:** Unless you have previous Java experience, I strongly recommend you build up to the solution in a piecemeal fashion. For example, first make a `Circle` class with a `radius`field only, and test it out from the main in `CircleTest`. Then add the `getArea` method, and test it. Then add in a constructor. Then test it out again. Then change the constructor to use the `this` keyword, and test yet again.
+	public static void main(String[] args) {
+		One a = new One();
+		System.out.println(a.x);
+		One b = a.getInstance();
+		System.out.println(a == b);
+	}
+
+}
+```
+
+3) If necessary, сhange the implementation of the `One` class to obtain the following results.
+
+```
+One::One(int)
+One::One()
+999
+true
+```
+
+> **Hint:** Do not specify return type in constructor declaration.
 >
-> **Hint:** The `Circle` class does not have a main, so you cannot execute it directly. You only directly run the `CircleTest` class, similar to the following.
-
-```java
-public class CircleTest {
-	public static void main(String[] args) {
-		for (int i = 0; i < 10; i++) {
-			double radius = 10 * Math.random();
-			Circle c = new Circle(radius);
-			System.out.println("Circle " + i);
-			System.out.println("Generated radius: " + radius);
-			System.out.println("Stored radius:    " + c.radius);
-			System.out.println();
-		}
-	}
-}
-```
-
-2) Modify `CircleTest` class to create an array of 100 circles, each with a random radius. Print out the sum of the areas of the circles. Also print the biggest and smallest areas.
-
-> **Hint:** Remember that in the two-step array allocation process, the following line only makes space for 100 circles (or, more technically, it allocates an array of 100 null Circle pointers), it does not create any circles: `Circle[] circles = new Circle[100];`
+> **Hint:** If present, the invocation of another constructor must be the first line in the constructor.
 >
-> **Hint:** To actually create the circles, you have to do a loop as shown below.
-
-```java
-for(int i = 0; i < circles.length; i++) {
-	circles[i] = new Circle(...);
-}
-```
-
-<span id="task_05_homework"></span>
-## Homework
-
-1) Create a `Rectangle` class that contains `width` and `height` fields. Also give it a `getArea` method. Again, make a few test cases using a `RectangleTest` class similar to the following.
-
-```java
-public class RectangleTest {
-	public static void main(String[] args) {
-		for (int i = 0; i < 10; i++) {
-			double width = 20 * Math.random();
-			double height = 10 * Math.random();
-			Rectangle r = new Rectangle(width, height);
-			System.out.println("Rectangle " + i);
-			System.out.println("Width:  " + r.width);
-			System.out.println("Height: " + r.height);
-			System.out.println("Area:   " + r.getArea());
-			System.out.println();
-		}
-	}
-}
-```
-
-2) Create a `Square` class with `width` and `getArea`. Then, give both `Square` and `Circle` `setArea` methods that let you specify a desired area. Make a few test cases using a `SquareTest` class like as the following.
-
-```java
-public class SquareTest {
-	public static void main(String[] args) {
-		for (int i = 0; i < 10; i++) {
-			double width = 10 * Math.random();
-			Square s = new Square(width);
-			System.out.println("Square " + i);
-			System.out.println("Width:  " + s.width);
-			System.out.println("Area:   " + s.getArea());
-			System.out.println();
-		}
-		for (int i = 0; i < 5; i++) {
-			double area = 100 * Math.random();
-			Square s = new Square(0.0);
-			s.setArea(area);
-			System.out.println("Square " + i);
-			System.out.println("Width:          " + s.width);
-			System.out.println("Requested area: " + area);
-			System.out.println("Actual Area:    " + s.getArea());
-			System.out.println();
-		}
-	}
-}
-```
+> **Hint:** Do not use private members to access them outside their class.
 
 <br>
 

@@ -1,161 +1,109 @@
 [<< Previous task](task03.md) | [Practice tasks](readme.md#practice) | [Next task >>](task05.md)
 
 <span id="task_04"></span>
-## 4. Constructors in Java
+## 3. Methods and Method Overloading in Java
 
-- [The Java Tutorials - Providing Constructors for Your Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html).
-- [Java Constructors](https://www.tutorialspoint.com/java/java_constructors.htm).
-- [Constructors in Java](https://www.javatpoint.com/java-constructor).
+- [Java Methods](https://www.tutorialspoint.com/java/java_methods.htm).
+- [Java Methods](https://www.w3schools.com/java/java_methods.asp).
 
 Create a new Eclipse project named `task04`. Use a package named `ua.khpi.oop.your_first_name.task04` for all created classes.
 
-1) Add a class called `ConstructorEx` to your package. Give it a field named `array`:
-
-```java
-class ConstructorEx {
-	int[] array;
-}
-```
-2) Add three constructors to your class:
-
-```java
-ConstructorEx(int length) {
-	// TODO: Initialize the field "array" by creating a new array using the
-	//       specified "length".
-}
-
-ConstructorEx(int[] srcArray) {
-	// TODO: Initialize the "array" field with the reference
-	//       to the specified "srcArray".
-}
-
-ConstructorEx(int[] srcArray, boolean copyArray) {
-	// TODO: Initialize the "array" field by reference to the specified "srcArray"
-	//       or by copying the contents of the "srcArray" depending on the "copyArray" flag.
-}
-```
-
-3) Use the following class `Main` to test the implemented constructors of class `ConstructorEx`.
-
-```java
-public class Main {
-
-	public static void main(String[] args) {
-		System.out.println("Begin...");
-
-		ConstructorEx a = new ConstructorEx(3);
-		System.out.println(Arrays.toString(a.array));
-		System.out.println("---");
-
-		int[] array = new int[5];
-
-		ConstructorEx b = new ConstructorEx(array);
-		Arrays.fill(array, 1);
-		System.out.println(Arrays.toString(array));
-		System.out.println(Arrays.toString(b.array));
-		System.out.println("---");
-
-		Arrays.fill(array, 2);
-		System.out.println(Arrays.toString(array));
-		System.out.println(Arrays.toString(b.array));
-		System.out.println("---");
-
-		ConstructorEx c = new ConstructorEx(array, true);
-		Arrays.fill(array, 3);
-		System.out.println(Arrays.toString(array));
-		System.out.println(Arrays.toString(c.array));
-		System.out.println("---");
-
-		ConstructorEx d = new ConstructorEx(array, false);
-		Arrays.fill(array, 4);
-		System.out.println(Arrays.toString(array));
-		System.out.println(Arrays.toString(d.array));
-
-		System.out.println("Done.");
-	}
-
-}
-```
-
-You should obtain the following result:
-
-```
-Begin...
-[0, 0, 0]
----
-[1, 1, 1, 1, 1]
-[1, 1, 1, 1, 1]
----
-[2, 2, 2, 2, 2]
-[2, 2, 2, 2, 2]
----
-[3, 3, 3, 3, 3]
-[2, 2, 2, 2, 2]
----
-[4, 4, 4, 4, 4]
-[4, 4, 4, 4, 4]
-Done.
-```
-
-<span id="task_04_homework"></span>
-## Homework
-
-- [The Java Tutorials - Providing Constructors for Your Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html).
-- [The Java Tutorials - Using the this Keyword](https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html).
-- [The Java Tutorials - Controlling Access to Members of a Class](https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html).
-
-
-1) Fix the compilation errors of the following program.
+1) Add a class called `One` to your package. Give it a method named `square` that will take an integer and return the square of the integer. For example, if you pass in `3`, it should return `9`. Your overall code will look roughly like this:
 
 ```java
 class One {
-	private int x;
-
-	void One() {
-		System.out.println("One::One()");
-		this(999);
-	}
-
-	One(int x) {
-		System.out.println("One::One(int)");
-		x = this.x;
-	}
-
-	private One getInstance() {
-		return null;
+	public static int square(int x) {
+		// Calculate and return the square of 'x'.
+		return 0;
 	}
 }
 ```
 
-2) Use the following `Main` class to test the implementation of the `One` class.
+2) Add a second method named `power` to your class. Return the result of `x` raised to `y`th power. For example, if your main method calls `power(2, 3)`, it should return `8`.
 
 ```java
-public class Main {
-
-	public static void main(String[] args) {
-		One a = new One();
-		System.out.println(a.x);
-		One b = a.getInstance();
-		System.out.println(a == b);
-	}
-
+public static int power(int x, int y) {
+	// Return the result of 'x' raised to 'y'th power.
+	return 0;
 }
 ```
 
-3) If necessary, сhange the implementation of the `One` class to obtain the following results.
+3) Add a third method named `power` to your class. This one should be similar to your second method, but shouldn't return any value. Pass an object of class `A` to this method. Modify the object to save the result.
 
-```
-One::One(int)
-One::One()
-999
-true
+```java
+public static void power(A a, int y) {
+	// Raise 'a.x' to the 'y'th power.
+}
 ```
 
-> **Hint:** Do not specify return type in constructor declaration.
+Pre-create a simple class `A`:
+
+```java
+class A {
+	int x;
+}
+```
+
+4) Add a fourth method named `power` to your class. Pass an array to this method. Raise each element of an array to the `y`th power.
+
+```java
+public static void power(int[] array, int y) {
+	// Raise each element of an array to the 'y'th power.
+}
+```
+
+5) Use the following class `Main` to test the implemented methods of class `One`.
+
+```java
+class Main {
+	public static void main(String[] args) {
+		System.out.println("Begin...");
+		// Use the following VM arguments: -enableassertions
+		{
+			int x = 3;
+			int y = 2;
+			int expected = 9;
+			int actual = One.power(x, y);
+			// Is the 'expected' equal to the 'actual'?
+			assert expected == actual : "expected = " + expected + " but actual = " + actual;
+		}
+		{
+			A actual = new A();
+			actual.x = 3;
+			int y = 2;
+			int expected = 9;
+			One.power(actual, y);
+			// Is the 'expected' equal to the 'actual.x'?
+			assert expected == actual.x : "expected = " + expected + " but actual = " + actual.x;
+		}
+		{
+			int[] actual = { 1, 2, 3, 4, 5 };
+			int y = 2;
+			int[] expected = { 1, 4, 9, 16, 25 };
+			One.power(actual, y);
+			// Is the 'expected' equal to the 'actual'?
+			assert Arrays.equals(expected, actual) : "expected = " + Arrays.toString(expected) + " but actual = "
+					+ Arrays.toString(actual);
+		}
+		System.out.println("Done.");
+	}
+}
+```
+
+> **Note:** There are two kinds of types in the Java programming language: *primitive* types (`byte`, `short`, `int`, `long`, `char`, `float`, `double`, `boolean`) and *reference* types (`class`, `interface`, `array`). There are, correspondingly, two kinds of data values that can be stored in variables, passed as arguments, returned by methods, and operated on: *primitive* values and *reference* values.
 >
-> **Hint:** If present, the invocation of another constructor must be the first line in the constructor.
+> An object is a dynamically created instance of a class type or a dynamically created array. The values of a reference type are references to objects.
 >
-> **Hint:** Do not use private members to access them outside their class.
+> Primitive values do not share state with other primitive values.
+
+<span id="extra_04"></span>
+## Extra
+
+Create a Java program to demonstrate method overloading:
+- by changing data type of arguments;
+- by changing arguments number.
+
+> **Help:** [The Java Tutorials - Defining Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html).
 
 <br>
 

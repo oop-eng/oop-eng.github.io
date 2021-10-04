@@ -134,8 +134,8 @@ public class Main {
 
 ```
 
-<span id="task_01_homework"></span>
-## Homework
+<span id="extra_01"></span>
+## Extra
 
 Explain the result of the following program fragment:
 

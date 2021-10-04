@@ -73,15 +73,16 @@ By the end of the course students will be expected to:
 
 1. [Using the Eclipse IDE for Java programming](task01.md).
 2. [Loops and Conditionals in Java](task02.md).
-3. [Methods and Method Overloading in Java](task03.md).
-4. [Constructors in Java](task04.md).
-5. [Basic Object-Oriented Programming in Java](task05.md).
-6. [Object-Oriented Programming: Inheritance](task06.md).
-7. [Object-Oriented Programming: Method Overriding, Polymorphism](task07.md).
-8. [Object-Oriented Programming: Advanced Capabilities](task08.md).
-9. [Java Collections: Lists, Maps, Sets](task09.md).
-10. [Generics in Java](task10.md).
-11. [Java Threads: Defining and starting a thread](task11.md).
+3. [Basic Java Syntax. Strings, Arrays, java.lang.Math](task03.md).
+4. [Methods and Method Overloading in Java](task04.md).
+5. [Constructors in Java](task05.md).
+6. [Basic Object-Oriented Programming in Java](task06.md).
+7. [Object-Oriented Programming: Inheritance](task07.md).
+8. [Object-Oriented Programming: Method Overriding, Polymorphism](task08.md).
+9. [Object-Oriented Programming: Advanced Capabilities](task09.md).
+10. [Java Collections: Lists, Maps, Sets](task10.md).
+11. [Generics in Java](task11.md).
+12. [Java Threads: Defining and starting a thread](task12.md).
 
 ---
 
