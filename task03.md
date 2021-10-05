@@ -46,9 +46,9 @@ Create a new Eclipse project named `task03`. Use a package named `ua.khpi.oop.yo
 
 4) Make a new class whose main method prints out the number of command line arguments: "You supplied x arguments.".
 
-> **Hint:** How to specify command line parameters in Eclipse:
+> **Hint:** How to specify command line parameters in Eclipse
 >
-> menu `Run / Run Configurations / Arguments -> Program arguments`
+> `Menu: Run / Run Configurations / Arguments -> Program arguments`
 
 5) Print the command line arguments in reverse order, converted to uppercase.
 
