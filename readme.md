@@ -44,8 +44,8 @@ By the end of the course students will be expected to:
 <span id="soft"></span>
 ## Development tools
 
-- [Oracle JDK](https://www.oracle.com/java/technologies/downloads/) or [OpenJDK](https://adoptium.net/).
-- [Eclipse IDE for Java Developers](http://www.eclipse.org/downloads/eclipse-packages/).
+- [Oracle JDK](https://www.oracle.com/java/technologies/downloads/) or [OpenJDK](https://adoptium.net/)
+- [Eclipse IDE for Java Developers](http://www.eclipse.org/downloads/eclipse-packages/)
 
 ---
 
