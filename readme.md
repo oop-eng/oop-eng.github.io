@@ -5,7 +5,7 @@ Java is an excellent language to introduce object-oriented programming. After co
 
 The course will also introduce elements of software engineering including the waterfall method. The course will also include a lecture on the use of data structures including, stacks, queues, hash tables and lists.
 
-## Course aims
+## Course Aims
 Java will be used to introduce Object Oriented Programming, commencing at an introductory level. The course will cover encapsulation, inheritance, polymorphism, software engineering, graphics programming and exception handling.
 
 ## Course Objectives
@@ -14,9 +14,9 @@ Java will be used to introduce Object Oriented Programming, commencing at an int
 
 - To introduce the [object-oriented paradigm](https://en.wikipedia.org/wiki/Object-oriented_programming).
 
-- To introduce graphics programming.
+- To introduce [unit testing](https://en.wikipedia.org/wiki/Unit_testing).
 
-## Programme details
+## Programme Details
 
 1. Java Syntax and Semantics, variables, the program development process.
 2. Programming constructs, loops and conditionals.
@@ -27,9 +27,9 @@ Java will be used to introduce Object Oriented Programming, commencing at an int
 7. Arrays including multi-dimensional arrays.
 8. Java Collections.
 9. Generic Types.
-10. Graphics programming.
+10. Unit Testing.
 
-## Learning outcomes
+## Learning Outcomes
 
 By the end of the course students will be expected to:
 
@@ -37,12 +37,12 @@ By the end of the course students will be expected to:
 
 - Understand the object-oriented paradigm.
 
-- Understand graphical objects used in Java.
+- Understand the basic concepts of unit testing in Java.
 
 ---
 
 <span id="soft"></span>
-## Development tools
+## Development Tools
 
 - [Oracle JDK](https://www.oracle.com/java/technologies/downloads/) or [OpenJDK](https://adoptium.net/)
 - [Eclipse IDE for Java Developers](http://www.eclipse.org/downloads/eclipse-packages/)
@@ -62,11 +62,14 @@ By the end of the course students will be expected to:
 - [Tutorial - Java Debugging with Eclipse](http://www.vogella.com/tutorials/EclipseDebugging/article.html)
 - [JDK 17 Documentation](https://docs.oracle.com/en/java/javase/17/)
 - [How to Write Doc Comments](https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html)
+- [How to Write Unit Tests](https://www.vogella.com/tutorials/JUnit/article.html)
 
 ---
 
 <span id="practice"></span>
-## Practice tasks
+## Practice Tasks
+
+### Part One (1st semester)
 
 1. [Using the Eclipse IDE for Java programming](task01.md)
 2. [Loops and Conditionals in Java](task02.md)
@@ -74,6 +77,9 @@ By the end of the course students will be expected to:
 4. [Methods and Method Overloading in Java](task04.md)
 5. [Constructors in Java](task05.md)
 6. [Basic Object-Oriented Programming in Java](task06.md)
+
+### Part Two (2nd semester)
+
 7. [Object-Oriented Programming: Inheritance](task07.md)
 8. [Object-Oriented Programming: Method Overriding, Polymorphism](task08.md)
 9. [Object-Oriented Programming: Advanced Capabilities](task09.md)
@@ -84,7 +90,7 @@ By the end of the course students will be expected to:
 ---
 
 <span id="classroom"></span>
-## Classroom activities
+## Classroom Activities
 
 [Draft](draft.md)
 
