@@ -1,12 +1,12 @@
 # Object-Oriented Programming
 
 ## Overview
-Java is an excellent language to introduce object-oriented programming. After commencing with the traditional procedural programming constructs the course moves swiftly onto the object-oriented paradigm. During the course we will cover: the creation of classes, overloading constructors and methods, arrays, polymorphism, encapsulation, the public, protected and private interfaces, inheritance, abstract classes and graphics programming.
+Java is an excellent language to introduce object-oriented programming. After commencing with the traditional procedural programming constructs the course moves swiftly onto the object-oriented paradigm. During the course we will cover: the creation of classes, overloading constructors and methods, arrays, polymorphism, encapsulation, the public, protected and private interfaces, inheritance, abstract classes and unit testing.
 
 The course will also introduce elements of software engineering including the waterfall method. The course will also include a lecture on the use of data structures including, stacks, queues, hash tables and lists.
 
 ## Course Aims
-Java will be used to introduce Object Oriented Programming, commencing at an introductory level. The course will cover encapsulation, inheritance, polymorphism, software engineering, graphics programming and exception handling.
+Java will be used to introduce Object Oriented Programming, commencing at an introductory level. The course will cover encapsulation, inheritance, polymorphism, exception handling, unit testing and software engineering.
 
 ## Course Objectives
 
